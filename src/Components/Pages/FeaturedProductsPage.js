@@ -9,7 +9,6 @@ import Broccoli from "../../Images/Products/Rectangle 199.png";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../../Images/Svg/SmallShopping.svg";
-import name from "../../Data.js";
 
 function FeaturedProductsPage() {
   return (
@@ -50,25 +49,23 @@ function FeaturedProductsPage() {
             width: "280px",
           }}
         >
-          {name.map((product) => {
-            <ProductCardsComponents
-              Proimage={product}
-              type="Vegetables"
-              proName={product}
-              fillstars={<StarRateIcon />}
-              emptyStar={<StarBorderIcon />}
-              spanStar="(4)"
-              by="By"
-              owner="Mr.food"
-              price="$2"
-              realPrice="$3.99"
-              addIcons={<Shopping />}
-              addToCard="Add"
-            />;
-          })}
+          <ProductCardsComponents
+            Proimage={Radish}
+            type="Vegetables"
+            proName="Redish 500g"
+            fillstars={<StarRateIcon />}
+            emptyStar={<StarBorderIcon />}
+            spanStar="(4)"
+            by="By"
+            owner="Mr.food"
+            price="$2"
+            realPrice="$3.99"
+            addIcons={<Shopping />}
+            addToCard="Add"
+          />
         </Box>
 
-        {/* <Box
+        <Box
           sx={{
             border: "1px solid rgba(173, 173, 173, 0.25)",
             borderRadius: "3px",
@@ -133,7 +130,7 @@ function FeaturedProductsPage() {
             addIcons={<Shopping />}
             addToCard="Add"
           />
-        </Box> */}
+        </Box>
       </Box>
     </>
   );

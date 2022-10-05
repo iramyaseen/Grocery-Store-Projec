@@ -9,6 +9,7 @@ import DiscountPage from "./Components/Pages/DiscountPage";
 import FooterPage from "./Components/Pages/FooterPage";
 import HeroLogopage from "./Components/Pages/HeroLogopage";
 import TopProductPage from "./Components/Pages/TopProductPage";
+
 import "./css/index.css";
 function App() {
   return (
