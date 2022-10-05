@@ -14,7 +14,8 @@ function LogoComponents() {
             fontSize: "20px",
             color: "#3BB77E",
             fontWeight: "700",
-            lineHeight: "0.9",
+            lineHeight: "1.167",
+            textTransform: "capitalize",
           }}
         >
           Groceyish
@@ -25,6 +26,8 @@ function LogoComponents() {
             fontSize: "12px",
             color: "#ADADAD",
             fontWeight: "500",
+            lineHeight: "1.167",
+            textTransform: "uppercase",
           }}
         >
           GROCERY

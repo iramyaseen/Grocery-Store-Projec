@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import LogoComponents from "../LogoComponents";
 import { ReactComponent as Address } from "../../Images/Svg/li_map-pin.svg";
@@ -9,55 +9,120 @@ import { ReactComponent as WorkHoure } from "../../Images/Svg/li_clock-9.svg";
 function FooterPage() {
   return (
     <Box>
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          paddingLeft: "60px",
+          paddingRight: "60px",
+        }}
+      >
+        <Box sx={{ paddingTop: "40px", alignItems: "center" }}>
           <LogoComponents />
-          <p>
+
+          <Typography
+            component="p"
+            sx={{
+              paddingTop: "20px",
+              paddingBottom: "20px",
+            }}
+          >
             <Address />
-            <span>Address:</span>
-            <span>1762 School House Road</span>
-          </p>
-          <p>
+            <Typography component="span" sx={{ paddingLeft: "7px" }}>
+              Address:
+            </Typography>
+            <Typography component="span">1762 School House Road</Typography>
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
             <CallPhone />
-            <span>Call Us:</span>
-            <span>1233-777</span>
-          </p>
-          <p>
+            <Typography component="span" sx={{ paddingLeft: "7px" }}>
+              Call Us:
+            </Typography>
+            <Typography component="span">1233-777</Typography>
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
             <Email />
-            <span>Email:</span>
-            <span>groceyish@contact.com</span>
-          </p>
-          <p>
+            <Typography component="span" sx={{ paddingLeft: "7px" }}>
+              Email:
+            </Typography>
+            <Typography component="span">groceyish@contact.com</Typography>
+          </Typography>
+          <Typography component="p">
             <WorkHoure />
-            <span>Work Hours:</span>
-            <span>8:00 - 20:00, Sunday - Thursday</span>
-          </p>
+            <Typography component="span" sx={{ paddingLeft: "7px" }}>
+              Work Hours:
+            </Typography>
+            <Typography component="span">
+              8:00 - 20:00, Sunday - Thursday
+            </Typography>
+          </Typography>
         </Box>
-        <Box>
-          <h3>Account</h3>
-          <p>Wishlist</p>
-          <p>Cart</p>
-          <p>Track Order</p>
-          <p>Shipping Details</p>
+        <Box sx={{ paddingTop: "40px" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Account
+          </Typography>
+          <Typography
+            component="p"
+            sx={{ paddingTop: "20px", paddingBottom: "20px" }}
+          >
+            Wishlist
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Cart
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Track Order
+          </Typography>
+          <Typography component="p">Shipping Details</Typography>
         </Box>
         {/*  */}
-        <Box>
-          <h3>Useful links</h3>
-          <p>About Us</p>
-          <p>Conact</p>
-          <p>Hot deals</p>
-          <p>Promotions</p>
-          <p>New products</p>
+        <Box sx={{ paddingTop: "40px" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Useful links
+          </Typography>
+          <Typography
+            component="p"
+            sx={{ paddingTop: "20px", paddingBottom: "20px" }}
+          >
+            About Us
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Conact
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Hot deals
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Promotions
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            New products
+          </Typography>
         </Box>
         {/*  */}
-        <Box>
-          <h3>Help Center</h3>
-          <p>Payments</p>
-          <p>Refund</p>
-          <p>Checkout</p>
-          <p>Shipping</p>
-          <p>Q&A</p>
-          <p>Privacy Policy</p>
+        <Box sx={{ paddingTop: "40px" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Help Center
+          </Typography>
+          <Typography
+            component="p"
+            sx={{ paddingTop: "20px", paddingBottom: "20px" }}
+          >
+            Payments
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Refund
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Checkout
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Shipping
+          </Typography>
+          <Typography component="p" sx={{ paddingBottom: "20px" }}>
+            Q&A
+          </Typography>
+          <Typography component="p">Privacy Policy</Typography>
         </Box>
       </Box>
     </Box>

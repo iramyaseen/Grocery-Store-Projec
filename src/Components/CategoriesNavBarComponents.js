@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
@@ -7,11 +8,28 @@ const margin = {
 function CategoriesNavBarComponents({ nav1, nav2, nav3, nav4, nav5 }) {
   return (
     <Box sx={{ display: "flex" }}>
-      <p style={margin}>{nav1}</p>
-      <p style={margin}>{nav2}</p>
-      <p style={margin}>{nav3}</p>
-      <p style={margin}>{nav4}</p>
-      <p style={margin}>{nav5}</p>
+      <Typography
+        component="p"
+        sx={{
+          color: "#3BB77E",
+          cursor: "pointer",
+        }}
+        style={margin}
+      >
+        {nav1}
+      </Typography>
+      <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
+        {nav2}
+      </Typography>{" "}
+      <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
+        {nav3}
+      </Typography>
+      <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
+        {nav4}
+      </Typography>
+      <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
+        {nav5}
+      </Typography>
     </Box>
   );
 }

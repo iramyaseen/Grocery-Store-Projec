@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 function TopProductComponent({
@@ -11,26 +11,69 @@ function TopProductComponent({
   sells,
 }) {
   return (
-    <Box>
-      <h1>{sells}</h1>
+    <Box sx={{ marginTop: "60px" }}>
+      <Typography
+        component="h1"
+        className="mySaless"
+        sx={{
+          fontSize: "30px",
+          fontWeight: "bold",
+        }}
+      >
+        {sells}
+      </Typography>
       <Box sx={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
-        <Box sx={{ background: "#F4F6FA" }}>
+        <Box sx={{ background: "#F4F6FA", padding: "0px 12px" }}>
           <img src={image} alt="product image" />
         </Box>
-        <Box>
-          <p>{ProductName}</p>
-          <p>
-            <span>
+        <Box sx={{ paddingLeft: "10px" }}>
+          <Typography
+            variant="p"
+            sx={{
+              color: "black",
+              fontWeight: "bold",
+              fontSize: "20px",
+            }}
+          >
+            {ProductName}
+          </Typography>
+          <Typography
+            component="p"
+            sx={{ paddingTop: "4px", paddingBottom: "8px" }}
+          >
+            <Typography component="span" sx={{ color: "#FDC040" }}>
               {icon1}
-              {icon2}4
-            </span>
-          </p>
-          <p>
-            {realPrice}
-            <span>
+            </Typography>
+            <Typography component="span" sx={{ color: "#FDC040" }}>
+              {icon1}
+            </Typography>
+            <Typography component="span" sx={{ color: "#FDC040" }}>
+              {icon1}
+            </Typography>
+            <Typography component="span" sx={{ color: "#FDC040" }}>
+              {icon1}
+            </Typography>
+            <Typography component="span" sx={{ color: "#D4D4D4" }}>
+              {icon2}
+            </Typography>
+          </Typography>
+
+          <Box>
+            <Typography
+              component="span"
+              sx={{
+                color: "#3BB77E",
+                paddingRight: "10px",
+                fontWeight: "bold",
+                fontSize: "18px",
+              }}
+            >
+              {realPrice}
+            </Typography>
+            <Typography component="span" sx={{ color: "#ADADAD" }}>
               <s>{discountPrice}</s>
-            </span>
-          </p>
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </Box>

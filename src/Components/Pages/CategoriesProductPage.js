@@ -10,11 +10,25 @@ import Potato from "../../Images/Products/image 8.png";
 import Carrot from "../../Images/Products/image 9.png";
 import CategoriesNavBarComponents from "../CategoriesNavBarComponents";
 import FeaturedProductsPage from "./FeaturedProductsPage";
+import FirstProductsComponents from "../FirstProductsComponents";
 function CategoriesProductPage() {
   return (
     <Box>
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        Explore Categories
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginLeft: "30px",
+          marginRight: "60px",
+          marginTop: "100px",
+          alignItems: "center",
+        }}
+      >
+        <span
+          style={{ fontSize: "30px", paddingBottom: "20px", fontWeight: "600" }}
+        >
+          Explore Categories
+        </span>
         <CategoriesNavBarComponents
           nav1="All"
           nav2="Vegetables"
@@ -24,44 +38,52 @@ function CategoriesProductPage() {
         />
       </Box>
 
-      <Box sx={{ display: "flex" }}>
-        <ProductCardsComponents
-          name="peach"
+      <Box
+        sx={{
+          display: "flex",
+          textAlign: "center",
+          justifyContent: "space-between",
+          marginLeft: "30px",
+          marginRight: "80px",
+        }}
+      >
+        <FirstProductsComponents
+          name="Peach"
           bgColor="#FEEFEA"
           image={peach}
           items="20 items"
         />
-        <ProductCardsComponents
+        <FirstProductsComponents
           name="Vegetables"
           bgColor="#FFF3FF"
           image={Vegetables}
           items="20 items"
         />
-        <ProductCardsComponents
-          name="strawberry"
+        <FirstProductsComponents
+          name="Strawberry"
           bgColor="#F2FCE4"
           image={strawberry}
           items="20 items"
         />
-        <ProductCardsComponents
+        <FirstProductsComponents
           name="Apple"
           bgColor="#FEEFEA"
           image={Apple}
           items="20 items"
         />
-        <ProductCardsComponents
+        <FirstProductsComponents
           name="Orange"
           bgColor="#ECFFEC"
           image={Orange}
           items="20 items"
         />
-        <ProductCardsComponents
+        <FirstProductsComponents
           name="Potato"
           bgColor="#FFFCEB"
           image={Potato}
           items="20 items"
         />
-        <ProductCardsComponents
+        <FirstProductsComponents
           name="Carrot"
           bgColor="#DEF9EC"
           image={Carrot}

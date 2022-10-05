@@ -28,6 +28,13 @@ export default function DropMeunBar(name) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        sx={{
+          textTransform: "capitalize",
+          color: "#253D4E",
+          padding: "12px",
+          width: "143px",
+          fontWeight: "bold",
+        }}
       >
         All Categories
         <ExpandMoreIcon id="change" />
