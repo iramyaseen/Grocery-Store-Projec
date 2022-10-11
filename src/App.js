@@ -1,31 +1,21 @@
 import { Box, Divider } from "@mui/material";
-import AppBarsPages from "./Components/Pages/AppBarsPages";
-import BenefitsPage from "./Components/Pages/BenefitsPage";
-import BottomHeroPage from "./Components/Pages/BottomHeroPage";
-import CategoriesProductPage from "./Components/Pages/CategoriesProductPage";
-import CopyWritePage from "./Components/Pages/CopyWritePage";
-import DailyBestSalepage from "./Components/Pages/DailyBestSalePage";
-import DiscountPage from "./Components/Pages/DiscountPage";
-import FooterPage from "./Components/Pages/FooterPage";
-import HeroLogopage from "./Components/Pages/HeroLogopage";
-import TopProductPage from "./Components/Pages/TopProductPage";
-
 import "./css/index.css";
+import { Route, Routes } from "react-router-dom";
+import MainHomePage from "./Components/Pages/MainHomePage";
+import { FruitsPage } from "./Components/Pages/FruitsPage";
+import { useParams } from "react-router-dom";
 function App() {
+  const param = useParams();
+  console.log(param);
   return (
     <Box>
-      <AppBarsPages />
-      <HeroLogopage />
-      <CategoriesProductPage />
-      <DiscountPage />
-      <DailyBestSalepage />
-      <TopProductPage />
-      <BottomHeroPage />
-      <BenefitsPage />
-      <Divider />
-      <FooterPage />
-      <Divider />
-      <CopyWritePage />
+      <Routes>
+        <Route path="/" element={<MainHomePage />} />
+        <Route path="/Vegetables" element={<FruitsPage />} />
+        <Route path="/Fruits" element={<FruitsPage />} />
+        <Route path="/Coffe&teas" element={<FruitsPage />} />
+        <Route path="/Meat" element={<FruitsPage />} />
+      </Routes>
     </Box>
   );
 }

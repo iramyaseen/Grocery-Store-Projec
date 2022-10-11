@@ -23,3 +23,58 @@
 .css-7n4obu-MuiToolbar-root {
   min-height: 0px !important;
 }
+.border {
+  border: 1px solid rgba(173, 173, 173, 0.25);
+  border-radius: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: 27px;
+}
+.border2 {
+  padding-left: 30px;
+  margin-right: 27px;
+}
+none {
+  transition: all 0.5s;
+}
+.none::-webkit-scrollbar {
+  display: none;
+}
+.RightAngle {
+  bottom: 170px;
+  left: 7px;
+}
+.leftAngle {
+  right: 72px;
+  bottom: 170px;
+}
+.RightAngle,
+.leftAngle {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #f2f3f4;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+.mySaless::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 200px;
+  height: 3px;
+  left: 4px;
+  top: 50px;
+}
+.saled::before {
+  content: "";
+  position: absolute;
+  background-color: #3bb77e;
+  width: 100px;
+  height: 3px;
+  left: 4px;
+  top: 50px;
+}

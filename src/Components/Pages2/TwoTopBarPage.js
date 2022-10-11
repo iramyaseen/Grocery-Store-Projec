@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Button, Divider, Link, Toolbar, Typography } from "@mui/material";
-import { ReactComponent as LayoutImag } from "../Images/Svg/li_layout-grid.svg";
-import { ReactComponent as Vector } from "../Images/Svg/Frame.svg";
-import { ReactComponent as Deal } from "../Images/Svg/hot deals 1.svg";
-import { ReactComponent as Percentctor } from "../Images/Svg/li_percent.svg";
-import { ReactComponent as Megaphone } from "../Images/Svg/li_megaphone.svg";
-import { ReactComponent as Call } from "../Images/Svg/Call.svg";
+import { ReactComponent as LayoutImag } from "../../Images/Svg/li_layout-grid.svg";
+import { ReactComponent as Vector } from "../../Images/Svg/Frame.svg";
+import { ReactComponent as Deal } from "../../Images/Svg/hot deals 1.svg";
+import { ReactComponent as Percentctor } from "../../Images/Svg/li_percent.svg";
+import { ReactComponent as Megaphone } from "../../Images/Svg/li_megaphone.svg";
+import { ReactComponent as Call } from "../../Images/Svg/Call.svg";
 
 function TwoTopBar() {
   return (

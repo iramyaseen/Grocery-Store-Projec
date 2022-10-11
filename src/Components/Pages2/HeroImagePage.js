@@ -17,7 +17,8 @@ const BoxSearch = styled("div")({
   paddingTop: "12px",
   paddingBottom: "12px",
 });
-function HeroLogopage() {
+
+export const HeroImagePage = () => {
   return (
     <Box className="hero_section" sx={{ position: "relative" }}>
       <Box
@@ -73,6 +74,4 @@ function HeroLogopage() {
       </Box>
     </Box>
   );
-}
-
-export default HeroLogopage;
+};

@@ -1,11 +1,10 @@
+import React from "react";
 import { Divider, styled, Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import AvatarComponents from "../AvatarComponents";
 import IconsImgComponent from "../IconsImgComponent";
-import LogoComponents from "../LogoComponents";
 import SearchComponents from "../SearchComponents";
-import TwoTopBar from "../TwoTopBar";
+import LogoComponents from "../LogoComponents";
 
 const StyledAppBar = styled(Toolbar)({
   display: "flex",
@@ -14,7 +13,8 @@ const StyledAppBar = styled(Toolbar)({
   marginBottom: "20px",
   padding: "0%",
 });
-function AppBarsPages() {
+
+export const AppNavBarPage = () => {
   return (
     <Box>
       <Box sx={{ marginLeft: "40px", marginRight: "40px" }}>
@@ -31,11 +31,7 @@ function AppBarsPages() {
           marginTop: "15px",
           marginBottom: "20px",
         }}
-      >
-        <TwoTopBar />
-      </Box>
+      ></Box>
     </Box>
   );
-}
-
-export default AppBarsPages;
+};
