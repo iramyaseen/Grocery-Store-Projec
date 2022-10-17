@@ -6,7 +6,7 @@ import { ReactComponent as Shopping } from "../../Images/Svg/li_shopping-cart_Wh
 import { CategoriesNavBarPage } from "./CategoriesNavBarPage";
 import { ReactComponent as ArrowRight } from "../../Images/Svg/li_arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../../Images/Svg/li_arrow-left.svg";
-import data from "../../Data.json";
+import { useSelector } from "react-redux";
 
 function DailyBestSalePage() {
   const carousel = useRef(null);
@@ -18,6 +18,9 @@ function DailyBestSalePage() {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
+  const ThirdProduct = useSelector(
+    (state) => state.allProduct.products.ThirdProduct
+  );
 
   return (
     <Box
@@ -52,7 +55,7 @@ function DailyBestSalePage() {
         className="none"
         ref={carousel}
       >
-        {data["ThirdProduct"].map((name) => {
+        {ThirdProduct?.map((name) => {
           return (
             <Box
               sx={{

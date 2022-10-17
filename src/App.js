@@ -1,12 +1,12 @@
-import { Box, Divider } from "@mui/material";
 import "./css/index.css";
 import { Route, Routes } from "react-router-dom";
-import MainHomePage from "./Components/Pages/MainHomePage";
-import { FruitsPage } from "./Components/Pages/FruitsPage";
 import { useParams } from "react-router-dom";
+import MainHomePage from "./Components/Pages2/MainHomePage";
+import { FruitsPage } from "./Components/Pages2/FruitsPage";
+import { Box } from "@mui/material";
 function App() {
   const param = useParams();
-  console.log(param);
+  console.log("consloe", param);
   return (
     <Box>
       <Routes>

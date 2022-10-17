@@ -1,16 +1,19 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import data from "../../Data.json";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 const margin = {
   marginRight: "30px",
 };
 
 export const CategoriesNavBarPage = () => {
+  const Categories = useSelector(
+    (state) => state.allProduct.products.Categories
+  );
   return (
     <>
-      {data["Categories"].map((Categories) => {
+      {Categories?.map((Categories) => {
         return (
           <Box sx={{ display: "flex" }}>
             <Typography

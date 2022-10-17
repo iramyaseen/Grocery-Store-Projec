@@ -2,12 +2,14 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import data from "../Data.json";
-
+import { useSelector } from "react-redux";
 function TopProductComponent() {
+  const FisrtProduct = useSelector(
+    (state) => state.allProduct.products.FisrtProduct
+  );
   return (
     <Box>
-      {data["FisrtProduct"].map((product) => {
+      {FisrtProduct?.map((product) => {
         return (
           <Box
             sx={{

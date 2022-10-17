@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Divider } from "@mui/material";
 import { AppNavBarPage } from "../Pages2/AppNavBarPage";
 import TwoTopBar from "../Pages2/TwoTopBarPage";
@@ -13,7 +13,7 @@ import BenefitsPage from "../Pages2/BenefitPage";
 import BottomHeroPage from "../Pages2/BottomPage";
 import FooterPage from "../Pages2/FooterPage";
 import CopyWritePage from "../Pages2/CopyWritepage";
-function MainHomePage() {
+export const FruitsPage = () => {
   return (
     <Box>
       <AppNavBarPage />
@@ -34,6 +34,4 @@ function MainHomePage() {
       <CopyWritePage />
     </Box>
   );
-}
-
-export default MainHomePage;
+};

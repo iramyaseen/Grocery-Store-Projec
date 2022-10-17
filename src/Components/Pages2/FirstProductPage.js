@@ -1,7 +1,11 @@
 import React from "react";
 import { Box, Container, Typography } from "@mui/material";
-import data from "../../Data.json";
+import { useSelector } from "react-redux";
 export const FirstProductPage = () => {
+  const FisrtProduct = useSelector(
+    (state) => state.allProduct.products.FisrtProduct
+  );
+
   return (
     <Box
       sx={{
@@ -12,7 +16,7 @@ export const FirstProductPage = () => {
         marginRight: "80px",
       }}
     >
-      {data["FisrtProduct"].map((name) => {
+      {FisrtProduct?.map((name) => {
         return (
           <Box
             sx={{

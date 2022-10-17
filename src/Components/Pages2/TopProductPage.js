@@ -1,15 +1,5 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-
-// import TopProductComponent from "../TopProductComponent";
-// import Apple from "../../Images/Products/image 6.png";
-// import Orange from "../../Images/Products/image 7.png";
-// import Potato from "../../Images/Products/image 8.png";
-// import Carrot from "../../Images/Products/image 9.png";
-// import peach from "../../Images/Products/image 3.png";
-// import Satobary from "../../Images/Products/image 5.png";
-// import vage from "../../Images/Products/image 4.png";
-
 import TopProductComponent from "../TopProductComponent";
 function TopProductPage() {
   return (
@@ -37,7 +27,6 @@ function TopProductPage() {
         </Typography>
         <TopProductComponent />
       </Box>
-
       <Box sx={{ marginTop: "60px", position: "relative" }}>
         <Typography component="h1" className="mySaless">
           <Typography
@@ -54,7 +43,6 @@ function TopProductPage() {
         </Typography>
         <TopProductComponent />
       </Box>
-
       <Box sx={{ marginTop: "60px", position: "relative" }}>
         <Typography component="h1" className="mySaless">
           <Typography
@@ -71,7 +59,6 @@ function TopProductPage() {
         </Typography>
         <TopProductComponent />
       </Box>
-
       <Box sx={{ marginTop: "60px", position: "relative" }}>
         <Typography component="h1" className="mySaless">
           <Typography
