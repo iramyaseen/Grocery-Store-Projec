@@ -1,11 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Box } from "@mui/material";
 import { CategoriesNavBarPage } from "./CategoriesNavBarPage";
 import { ReactComponent as ArrowRight } from "../../Images/Svg/li_arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../../Images/Svg/li_arrow-left.svg";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { setProducts } from "../../redux/action/productAction";
 import { FruiteMapFunction } from "../FruiteMapFunction";
 import { FirstFruitesMapFunction } from "../FirstFruitesMapFunction";
 import { SecondProductMapFunction } from "./SecondProductMapFunction";
@@ -21,16 +18,6 @@ export const FeaturedProductsPage = () => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
-  const dispatch = useDispatch();
-  const fetchData = async () => {
-    const response = await axios.get("/Data.json").catch((error) => {
-      console.log("error", error);
-    });
-    dispatch(setProducts(response.data));
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
   return (
     <Box>
       <Box
@@ -40,6 +27,8 @@ export const FeaturedProductsPage = () => {
           justifyContent: "space-between",
           marginLeft: "30px",
           marginRight: "80px",
+          marginTop: "80px",
+          marginBottom: "25px",
         }}
       >
         <span style={{ fontSize: "30px", fontWeight: "600" }}>
@@ -52,7 +41,6 @@ export const FeaturedProductsPage = () => {
           display: "flex",
           justifyContent: "space-between",
           marginLeft: "30px",
-          width: "100px",
           marginRight: "80px",
           width: "1250px",
           overflow: "scroll",
@@ -60,7 +48,7 @@ export const FeaturedProductsPage = () => {
         className="none"
         ref={carousel}
       >
-        {window.location.pathname === "/Vegetables" ? (
+        {window.location.pathname === `/Vegetables` ? (
           <FirstFruitesMapFunction />
         ) : window.location.pathname === "/Fruits" ? (
           <FruiteMapFunction />

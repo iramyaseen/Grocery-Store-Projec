@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, Box, Toolbar, Typography } from "@mui/material";
 import AvatarImage from "../Images/Ellipse 2.png";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AvatarDropDown from "./AvatarDropDown";
 function AvatarComponents() {
   return (
     <Box>
@@ -15,9 +15,9 @@ function AvatarComponents() {
       >
         <Avatar alt="Remy Sharp" src={AvatarImage} />
         <Typography sx={{ textTransform: "capitalize", paddingLeft: "10px" }}>
-          Ramzi Cherif
+          <AvatarDropDown />
+          {/* Ramzi Cherif */}
         </Typography>
-        <ExpandMoreIcon id="change" style={{ cursor: "pointer" }} />
       </Toolbar>
     </Box>
   );

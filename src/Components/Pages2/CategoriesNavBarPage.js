@@ -8,35 +8,90 @@ const margin = {
 };
 
 export const CategoriesNavBarPage = () => {
-  const Categories = useSelector(
-    (state) => state.allProduct.products.Categories
-  );
+  const items = useSelector((state) => state.products.items.Categories);
   return (
     <>
-      {Categories?.map((Categories) => {
+      {items?.map((Categories) => {
         return (
-          <Box sx={{ display: "flex" }}>
-            <Typography
-              component="p"
-              sx={{
-                color: "#3BB77E",
-                cursor: "pointer",
-              }}
-              style={margin}
-            >
-              <NavLink to="/">{Categories.val1}</NavLink>
+          <Box
+            sx={{
+              display: "flex",
+              paddingTop: {
+                md: "20px",
+                sm: "20px",
+                xs: "20px",
+              },
+            }}
+          >
+            <Typography component="p" style={margin}>
+              <NavLink
+                to="/"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#3BB77E" : "black",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  };
+                }}
+              >
+                {Categories.val1}
+              </NavLink>
             </Typography>
             <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink to="/Vegetables">{Categories.val2}</NavLink>
+              <NavLink
+                to={`/Vegetables`}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#3BB77E" : "black",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  };
+                }}
+              >
+                {Categories.val2}
+              </NavLink>
             </Typography>
             <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink to="/Fruits">{Categories.val3}</NavLink>
+              <NavLink
+                to="/Fruits"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#3BB77E" : "black",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  };
+                }}
+              >
+                {Categories.val3}
+              </NavLink>
             </Typography>
             <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink to="/Coffe&teas">{Categories.val4}</NavLink>
+              <NavLink
+                to="/Coffe&teas"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#3BB77E" : "black",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  };
+                }}
+              >
+                {Categories.val4}
+              </NavLink>
             </Typography>
             <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink to="/Meat">{Categories.val5}</NavLink>
+              <NavLink
+                to="/Meat"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#3BB77E" : "black",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  };
+                }}
+              >
+                {Categories.val5}
+              </NavLink>
             </Typography>
           </Box>
         );

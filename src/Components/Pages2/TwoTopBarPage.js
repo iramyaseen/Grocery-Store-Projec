@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Divider, Link, Toolbar, Typography } from "@mui/material";
+import { Box, Button, Link, Toolbar, Typography } from "@mui/material";
 import { ReactComponent as LayoutImag } from "../../Images/Svg/li_layout-grid.svg";
 import { ReactComponent as Vector } from "../../Images/Svg/Frame.svg";
 import { ReactComponent as Deal } from "../../Images/Svg/hot deals 1.svg";
@@ -9,31 +9,56 @@ import { ReactComponent as Call } from "../../Images/Svg/Call.svg";
 
 function TwoTopBar() {
   return (
-    <Box sx={{ paddingLeft: "60px", paddingRight: "60px" }}>
+    <Box
+      sx={{
+        paddingLeft: "60px",
+        paddingRight: "60px",
+        paddingBottom: "30px",
+        paddingTop: "10px",
+        alignItems: "center",
+      }}
+    >
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
+          display: {
+            lg: "flex",
+            xs: "none",
+            sm: "none",
+            md: "none",
+          },
+          justifyContent: {
+            lg: "space-between",
+          },
+
+          flexWrap: "wrap",
         }}
       >
         <Box>
           <Button
-            className=""
             sx={{
               background: "#3bb77e",
+              position: "inherit",
               color: "white",
               "&:hover": {
                 background: "#3bb77e",
               },
             }}
           >
-            <Toolbar component="span" className="categories_btn">
+            <Toolbar
+              component="span"
+              className="categories_btn"
+              sx={{ position: "inherit" }}
+            >
               <LayoutImag />
               <span style={{ paddingLeft: "10px" }}> brows all categories</span>
             </Toolbar>
           </Button>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+          }}
+        >
           <Box sx={{ display: "flex" }}>
             <Vector />
             <Link href="#" variant="body2" className="FirstLink">
@@ -59,7 +84,13 @@ function TwoTopBar() {
             </Link>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
           <Call className="call" />
           <Link href="#" variant="body2" className="numberLink">
             1233-7777

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Box, Divider } from "@mui/material";
 import { AppNavBarPage } from "../Pages2/AppNavBarPage";
 import TwoTopBar from "../Pages2/TwoTopBarPage";

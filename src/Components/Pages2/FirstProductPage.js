@@ -2,24 +2,24 @@ import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
 export const FirstProductPage = () => {
-  const FisrtProduct = useSelector(
-    (state) => state.allProduct.products.FisrtProduct
-  );
-
+  const items = useSelector((state) => state.products.items.FisrtProduct);
+  console.log(items);
   return (
     <Box
       sx={{
         display: "flex",
-        textAlign: "center",
         justifyContent: "space-between",
+        textAlign: "center",
+        flexWrap: "wrap",
         marginLeft: "30px",
         marginRight: "80px",
       }}
     >
-      {FisrtProduct?.map((name) => {
+      {items?.map((name) => {
         return (
           <Box
             sx={{
+              marginBottom: "20px",
               background: `${name.bgColor}`,
               paddingBottom: "20px",
             }}

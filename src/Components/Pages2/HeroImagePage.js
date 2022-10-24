@@ -20,57 +20,71 @@ const BoxSearch = styled("div")({
 
 export const HeroImagePage = () => {
   return (
-    <Box className="hero_section" sx={{ position: "relative" }}>
+    <Box className="hero_section">
       <Box
         className="here_image"
         sx={{
           display: "flex",
           justifyContent: "space-between",
           paddingLeft: "60px",
+          paddingBottom: {
+            md: "100px",
+            sm: "100px",
+            xs: "100px",
+          },
         }}
       >
-        <Box sx={{}}>
+        <Box>
           <Typography
             component="h1"
             sx={{ fontSize: "55px", fontWeight: "bold", paddingTop: "100px" }}
           >
-            Don’t miss our daily amazing deals
+            Don’t miss our daily <br /> amazing deals
           </Typography>
           <Typography component="p" style={{ color: "#838383" }}>
             Save up to 60% off on your first order
           </Typography>
+          <Box sx={{ width: "90%", marginTop: "30px" }}>
+            <BoxSearch>
+              <Send />
+              <Toolbar>
+                <InputBase
+                  sx={{
+                    width: "  300px",
+                    marginLeft: "15px",
+                    width: {
+                      sm: "200px",
+                      marginRight: "55px",
+                    },
+                    marginRight: {
+                      xs: "70px",
+                    },
+                  }}
+                  placeholder="Enter your email address "
+                />
+              </Toolbar>
+              <Toolbar
+                className="subscribe"
+                sx={{ background: "#3BB77E", color: "white" }}
+                component="p"
+              >
+                Subscribe
+              </Toolbar>
+            </BoxSearch>
+          </Box>
         </Box>
-        <Box>
-          <img src={HeroImg} />
+        <Box
+          sx={{
+            display: {
+              xl: "flex",
+              lg: "flex",
+              md: "none",
+              xs: "none",
+            },
+          }}
+        >
+          <img alt="heroImage" src={HeroImg} />
         </Box>
-      </Box>
-      <Box sx={{ position: "absolute", top: "67%", left: "60px" }}>
-        <BoxSearch>
-          <Send />
-          <Toolbar>
-            <InputBase
-              sx={{
-                width: "300px",
-                marginLeft: "15px",
-                width: {
-                  sm: "200px",
-                  marginRight: "55px",
-                },
-                marginRight: {
-                  xs: "70px",
-                },
-              }}
-              placeholder="Enter your email address "
-            />
-          </Toolbar>
-          <Toolbar
-            className="subscribe"
-            sx={{ background: "#3BB77E", color: "white" }}
-            component="p"
-          >
-            Subscribe
-          </Toolbar>
-        </BoxSearch>
       </Box>
     </Box>
   );

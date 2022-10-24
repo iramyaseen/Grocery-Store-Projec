@@ -9,6 +9,8 @@ function TopProductPage() {
         justifyContent: "space-between",
         marginLeft: "60px",
         marginRight: "60px",
+        marginTop: "30px",
+        marginBottom: "80px",
       }}
     >
       <Box sx={{ marginTop: "60px", position: "relative" }}>

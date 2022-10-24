@@ -5,11 +5,11 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../Images/Svg/SmallShopping.svg";
 import { useSelector } from "react-redux";
 export const CoffeteasMapFunction = () => {
-  const Coffeteas = useSelector((state) => state.allProduct.products.teaCoffy);
+  const items = useSelector((state) => state.products.items.teaCoffy);
 
-  return Coffeteas?.map((name) => {
+  return items?.map((name) => {
     return (
-      <Box className="border" sx={{ border: "2px soild red" }}>
+      <Box key={name.id} className="border" sx={{ border: "2px soild red" }}>
         <Box
           sx={{
             paddingTop: "20px",

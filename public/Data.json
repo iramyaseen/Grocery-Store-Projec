@@ -56,6 +56,7 @@
       "bgColor": "#DEF9EC",
       "type": "Vegetables"
     },
+
     {
       "id": "7",
       "image": "/Images/Products/Rectangle 19.png",
@@ -63,103 +64,70 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "14",
+      "id": "8",
       "image": "/Images/imag1.png",
       "name": "Coffe 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "12",
+      "id": "9",
       "image": "/Images/SaleProducts/Rectangle 2.png",
       "name": "Halal Sausage 350g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "9",
+      "id": "10",
       "image": "/Images/Rectangle 19.png",
       "name": "Tomatos 200g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Fruits",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "10",
+      "id": "11",
       "image": "/Images/Products/Rectangle 199.png",
       "name": "Broccoli 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "7",
+      "id": "12",
       "image": "/Images/Products/image 8.png",
       "name": "Potatos 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "8",
+      "id": "13",
       "image": "/Images/Products/Rectangle 19.png",
       "name": "Redish 500g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
-    },
-    {
-      "id": "11",
-      "image": "/Images/imag1.png",
-      "name": "Coffe 1kg",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
-      "id": "12",
-      "image": "/Images/SaleProducts/Rectangle 2.png",
-      "name": "Halal Sausage 350g",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
-      "id": "13",
-      "image": "/Images/SaleProducts/Rectangle 3.png",
-      "name": "Green Tea 250g",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "14",
@@ -168,52 +136,85 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "11",
-      "image": "/Images/imag1.png",
-      "name": "Coffe 1kg",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
-      "id": "12",
+      "id": "15",
       "image": "/Images/SaleProducts/Rectangle 2.png",
       "name": "Halal Sausage 350g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "13",
+      "id": "16",
       "image": "/Images/SaleProducts/Rectangle 3.png",
       "name": "Green Tea 250g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "14",
+      "id": "17",
       "image": "/Images/imag1.png",
       "name": "Coffe 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "18",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "19",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "20",
+      "image": "/Images/SaleProducts/Rectangle 3.png",
+      "name": "Green Tea 250g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "21",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     }
   ],
@@ -283,180 +284,247 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "14",
+      "id": "8",
       "image": "/Images/imag1.png",
       "name": "Coffe 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "12",
+      "id": "9",
       "image": "/Images/SaleProducts/Rectangle 2.png",
       "name": "Halal Sausage 350g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "9",
+      "id": "10",
       "image": "/Images/Rectangle 19.png",
       "name": "Tomatos 200g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Fruits",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "10",
+      "id": "11",
       "image": "/Images/Products/Rectangle 199.png",
       "name": "Broccoli 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "7",
+      "id": "12",
       "image": "/Images/Products/image 8.png",
       "name": "Potatos 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "8",
+      "id": "13",
       "image": "/Images/Products/Rectangle 19.png",
       "name": "Redish 500g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
-    },
-
-    {
-      "id": "9",
-      "image": "/Images/Products/Rectangle 199.png",
-      "name": "Broccoli 1kg",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
-      "id": "10",
-      "image": "/Images/Rectangle 19.png",
-      "name": "Tomatos 200g",
+      "id": "14",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
       "owner": "Mr.food",
       "by": "By",
-      "type": "Fruits",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "15",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "16",
+      "image": "/Images/SaleProducts/Rectangle 3.png",
+      "name": "Green Tea 250g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "17",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "18",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "19",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "20",
+      "image": "/Images/SaleProducts/Rectangle 3.png",
+      "name": "Green Tea 250g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "21",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
     }
   ],
   "ThirdProduct": [
     {
-      "id": "11",
-      "image": "/Images/imag1.png",
-      "name": "Coffe 1kg",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
-      "id": "12",
-      "image": "/Images/SaleProducts/Rectangle 2.png",
-      "name": "Halal Sausage 350g",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
-      "id": "13",
-      "image": "/Images/SaleProducts/Rectangle 3.png",
-      "name": "Green Tea 250g",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
       "id": "14",
       "image": "/Images/imag1.png",
       "name": "Coffe 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "11",
-      "image": "/Images/imag1.png",
-      "name": "Coffe 1kg",
-      "owner": "Mr.food",
-      "by": "By",
-      "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
-      "sold": "20/50"
-    },
-    {
-      "id": "12",
+      "id": "15",
       "image": "/Images/SaleProducts/Rectangle 2.png",
       "name": "Halal Sausage 350g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "13",
+      "id": "16",
       "image": "/Images/SaleProducts/Rectangle 3.png",
       "name": "Green Tea 250g",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
-      "id": "14",
+      "id": "17",
       "image": "/Images/imag1.png",
       "name": "Coffe 1kg",
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "18",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "19",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "20",
+      "image": "/Images/SaleProducts/Rectangle 3.png",
+      "name": "Green Tea 250g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "21",
+      "image": "/Images/imag1.png",
+      "name": "Coffe 1kg",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Coffe & teas",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     }
   ],
@@ -479,8 +547,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "8",
@@ -489,8 +557,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "10",
@@ -499,8 +567,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "7",
@@ -509,8 +577,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "8",
@@ -519,8 +587,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "9",
@@ -529,8 +597,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Vegetables",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     }
   ],
   "Frite": [
@@ -541,8 +609,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Fruits",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     },
     {
       "id": "10",
@@ -551,8 +619,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Fruits",
-      "price": "$2",
-      "realPrice": "$3.99"
+      "price": "2",
+      "realPrice": "3.99"
     }
   ],
   "teaCoffy": [
@@ -563,8 +631,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -574,8 +642,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -585,8 +653,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -596,8 +664,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -607,8 +675,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -618,8 +686,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -629,8 +697,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -640,8 +708,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Coffe & teas",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     }
   ],
@@ -653,8 +721,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -664,8 +732,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     },
     {
@@ -675,8 +743,8 @@
       "owner": "Mr.food",
       "by": "By",
       "type": "Meat",
-      "price": "$20",
-      "realPrice": "$25",
+      "price": "20",
+      "realPrice": "25",
       "sold": "20/50"
     }
   ]

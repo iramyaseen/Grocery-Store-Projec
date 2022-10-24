@@ -5,13 +5,10 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../Images/Svg/SmallShopping.svg";
 import { useSelector } from "react-redux";
 export const FirstFruitesMapFunction = () => {
-  const productsData = useSelector(
-    (state) => state.allProduct.products.firstVagetable
-  );
-
-  return productsData?.map((name) => {
+  const items = useSelector((state) => state.products.items.firstVagetable);
+  return items?.map((name) => {
     return (
-      <Box className="border" sx={{ border: "2px soild red" }}>
+      <Box key={name.id} className="border" sx={{ border: "2px soild red" }}>
         <Box
           sx={{
             paddingTop: "20px",

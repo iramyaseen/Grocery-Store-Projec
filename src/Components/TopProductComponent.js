@@ -4,12 +4,11 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { useSelector } from "react-redux";
 function TopProductComponent() {
-  const FisrtProduct = useSelector(
-    (state) => state.allProduct.products.FisrtProduct
-  );
+  const items = useSelector((state) => state.products.items.FisrtProduct);
+
   return (
-    <Box>
-      {FisrtProduct?.map((product) => {
+    <Box sx={{ paddingTop: "25px" }}>
+      {items?.map((product) => {
         return (
           <Box
             sx={{

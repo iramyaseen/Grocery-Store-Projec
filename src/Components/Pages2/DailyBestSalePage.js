@@ -6,7 +6,9 @@ import { ReactComponent as Shopping } from "../../Images/Svg/li_shopping-cart_Wh
 import { CategoriesNavBarPage } from "./CategoriesNavBarPage";
 import { ReactComponent as ArrowRight } from "../../Images/Svg/li_arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../../Images/Svg/li_arrow-left.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 function DailyBestSalePage() {
   const carousel = useRef(null);
@@ -18,10 +20,13 @@ function DailyBestSalePage() {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
-  const ThirdProduct = useSelector(
-    (state) => state.allProduct.products.ThirdProduct
-  );
-
+  const items = useSelector((state) => state.products.items.ThirdProduct);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handlerClick = (product) => {
+    dispatch(addToCart(product));
+    navigate("/cart-products");
+  };
   return (
     <Box
       sx={{
@@ -47,7 +52,6 @@ function DailyBestSalePage() {
           display: "flex",
           justifyContent: "space-between",
           marginLeft: "30px",
-          width: "100px",
           marginRight: "80px",
           width: "1250px",
           overflow: "scroll",
@@ -55,9 +59,10 @@ function DailyBestSalePage() {
         className="none"
         ref={carousel}
       >
-        {ThirdProduct?.map((name) => {
+        {items?.map((name) => {
           return (
             <Box
+              key={name.id}
               sx={{
                 background: "#FFFFFF",
                 border: "1px solid rgba(173, 173, 173, 0.25)",
@@ -191,6 +196,7 @@ function DailyBestSalePage() {
                           background: "#3BB77E",
                         },
                       }}
+                      onClick={() => handlerClick(name)}
                     >
                       <Typography
                         component="span"

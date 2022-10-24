@@ -7,11 +7,15 @@ export const ProductCategoriesPage = () => {
     <Box>
       <Box
         sx={{
-          display: "flex",
+          display: {
+            xl: "flex",
+            lg: "flex",
+          },
           justifyContent: "space-between",
           marginLeft: "30px",
           marginRight: "60px",
-          marginTop: "100px",
+          marginTop: "80px",
+          marginBottom: "25px",
           alignItems: "center",
         }}
       >

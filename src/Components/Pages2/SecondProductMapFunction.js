@@ -3,14 +3,22 @@ import { Box, Button, Typography } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../../Images/Svg/SmallShopping.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
 export const SecondProductMapFunction = () => {
-  const secondProduct = useSelector(
-    (state) => state.allProduct.products.SecondProduct
-  );
-  return secondProduct?.map((name) => {
+  const items = useSelector((state) => state.products.items.SecondProduct);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handlerClick = (product) => {
+    dispatch(addToCart(product));
+    navigate("/cart-products");
+  };
+
+  return items?.map((name) => {
     return (
-      <Box className="border" sx={{ border: "2px soild red" }}>
+      <Box key={name.id} className="border" sx={{ border: "2px soild red" }}>
         <Box
           sx={{
             paddingTop: "20px",
@@ -125,6 +133,7 @@ export const SecondProductMapFunction = () => {
                   textTransform: "capitalize",
                   paddingLeft: "5px",
                 }}
+                onClick={() => handlerClick(name)}
               >
                 Add
               </span>

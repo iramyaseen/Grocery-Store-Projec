@@ -3,12 +3,8 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useSelector } from "react-redux";
-import { Box } from "@mui/system";
-
-export default function DropMeunBar(name) {
+export default function AvatarDropDown(name) {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const items = useSelector((state) => state.products.items.Categories);
 
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -34,7 +30,7 @@ export default function DropMeunBar(name) {
           fontWeight: "bold",
         }}
       >
-        All Categories
+        Ramzi Cherif
         <ExpandMoreIcon id="change" />
       </Button>
       <Menu
@@ -46,16 +42,9 @@ export default function DropMeunBar(name) {
           "aria-labelledby": "basic-button",
         }}
       >
-        {items?.map((cate, key) => {
-          return (
-            <Box key={key}>
-              <MenuItem onClick={handleClose}>{cate.val2}</MenuItem>
-              <MenuItem onClick={handleClose}>{cate.val3}</MenuItem>
-              <MenuItem onClick={handleClose}>{cate.val4}</MenuItem>
-              <MenuItem onClick={handleClose}>{cate.val5}</MenuItem>
-            </Box>
-          );
-        })}
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>Setting</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
   );

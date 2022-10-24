@@ -24,7 +24,6 @@ function MainHomePage() {
       <FeaturedProductsPage />
       <DiscountPage />
       <DailyBestSalePage />
-      <BottomHeroPage />
       <TopProductPage />
       <BottomHeroPage />
       <BenefitsPage />
