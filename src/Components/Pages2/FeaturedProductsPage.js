@@ -19,14 +19,16 @@ export const FeaturedProductsPage = () => {
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
   return (
-    <Box>
+    <Box sx={{ width: "100%" }}>
       <Box
         sx={{
           display: "flex",
+          width: "100%",
+          border: "2px solid black",
           textAlign: "center",
           justifyContent: "space-between",
-          marginLeft: "30px",
-          marginRight: "80px",
+          paddingLeft: "30px",
+          paddingRight: "80px",
           marginTop: "80px",
           marginBottom: "25px",
         }}
@@ -42,7 +44,7 @@ export const FeaturedProductsPage = () => {
           justifyContent: "space-between",
           marginLeft: "30px",
           marginRight: "80px",
-          width: "1250px",
+          maxWidth: "1250px",
           overflow: "scroll",
         }}
         className="none"

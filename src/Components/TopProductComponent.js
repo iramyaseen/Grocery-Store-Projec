@@ -7,7 +7,7 @@ function TopProductComponent() {
   const items = useSelector((state) => state.products.items.FisrtProduct);
 
   return (
-    <Box sx={{ paddingTop: "25px" }}>
+    <Box sx={{ paddingTop: "25px", border: "2px solid black", width: "100%" }}>
       {items?.map((product) => {
         return (
           <Box
@@ -15,6 +15,7 @@ function TopProductComponent() {
               display: "flex",
               alignItems: "center",
               marginBottom: "20px",
+              width: "100%",
             }}
           >
             <Box sx={{ background: "#F4F6FA", padding: "0px 12px" }}>

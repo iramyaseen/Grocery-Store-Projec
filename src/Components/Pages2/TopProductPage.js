@@ -6,14 +6,22 @@ function TopProductPage() {
     <Box
       sx={{
         display: "flex",
+        width: "100%",
         justifyContent: "space-between",
-        marginLeft: "60px",
-        marginRight: "60px",
+
         marginTop: "30px",
         marginBottom: "80px",
+        border: "2px solid red",
       }}
     >
-      <Box sx={{ marginTop: "60px", position: "relative" }}>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+          border: "2px solid green",
+        }}
+      >
         <Typography component="h1" className="mySaless">
           <Typography
             component="h1"
@@ -29,7 +37,14 @@ function TopProductPage() {
         </Typography>
         <TopProductComponent />
       </Box>
-      <Box sx={{ marginTop: "60px", position: "relative" }}>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+          border: "2px solid green",
+        }}
+      >
         <Typography component="h1" className="mySaless">
           <Typography
             component="h1"
@@ -45,7 +60,14 @@ function TopProductPage() {
         </Typography>
         <TopProductComponent />
       </Box>
-      <Box sx={{ marginTop: "60px", position: "relative" }}>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+          border: "2px solid green",
+        }}
+      >
         <Typography component="h1" className="mySaless">
           <Typography
             component="h1"
@@ -61,7 +83,14 @@ function TopProductPage() {
         </Typography>
         <TopProductComponent />
       </Box>
-      <Box sx={{ marginTop: "60px", position: "relative" }}>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+          border: "2px solid green",
+        }}
+      >
         <Typography component="h1" className="mySaless">
           <Typography
             component="h1"

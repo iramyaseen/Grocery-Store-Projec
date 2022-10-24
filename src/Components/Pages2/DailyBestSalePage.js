@@ -31,6 +31,8 @@ function DailyBestSalePage() {
     <Box
       sx={{
         marginTop: "80px",
+        width: "100%",
+        border: "2px solid black",
       }}
     >
       <Box
@@ -51,10 +53,11 @@ function DailyBestSalePage() {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          marginLeft: "30px",
-          marginRight: "80px",
-          width: "1250px",
+          paddingLeft: "30px",
+          paddingRight: "80px",
+          width: "100%",
           overflow: "scroll",
+          border: "1px solid black",
         }}
         className="none"
         ref={carousel}
