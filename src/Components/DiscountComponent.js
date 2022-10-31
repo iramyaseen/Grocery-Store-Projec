@@ -1,21 +1,25 @@
 import React from "react";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { ReactComponent as RightArrow } from "../Images/Svg/li_arrow-right.svg";
 import image from "../Images/Offer1-img.png";
 import discountHeroImage from "../Images/Offer2-img.png";
 
-function DiscountComponent() {
+export const DiscountComponent = () => {
   return (
     <Box
+      className="nav_bar discount_components"
       sx={{
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
+        paddingTop: "80px",
+        paddingRight: "50px",
+        paddingLeft: "50px",
       }}
     >
       <Box
         sx={{
           background: "#FFF5E1D9",
-          width: "630px",
+          width: "600px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -66,11 +70,15 @@ function DiscountComponent() {
               fontSize: "20px",
             }}
           >
-            Shop Now {<RightArrow />}
+            Shop Now {<RightArrow className="svg_icons" />}
           </Button>
         </Box>
-        <Box>
-          <img src={image} />
+        <Box sx={{ position: "relative" }}>
+          <img
+            style={{ position: "absolute", top: "-130px", right: "10%" }}
+            src={image}
+            alt="discontImage"
+          />
         </Box>
       </Box>
 
@@ -78,7 +86,7 @@ function DiscountComponent() {
       <Box
         sx={{
           background: "#D2EFE1",
-          width: "630px",
+          width: "600px",
           display: "flex",
           justifyContent: "space-between",
           paddingTop: "33px",
@@ -126,18 +134,17 @@ function DiscountComponent() {
               fontSize: "20px",
             }}
           >
-            Order Now {<RightArrow />}
+            Order Now {<RightArrow className="svg_icons" />}
           </Button>
         </Box>
         <Box sx={{ position: "relative" }}>
           <img
             src={discountHeroImage}
             style={{ position: "absolute", bottom: "0%", right: "10%" }}
+            alt="discountImage"
           />
         </Box>
       </Box>
     </Box>
   );
-}
-
-export default DiscountComponent;
+};

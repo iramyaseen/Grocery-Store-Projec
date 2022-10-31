@@ -7,20 +7,15 @@ const margin = {
   marginRight: "30px",
 };
 
-export const CategoriesNavBarPage = () => {
+export const CategoriesNavBar = () => {
   const items = useSelector((state) => state.products.items.Categories);
   return (
-    <>
+    <Box className="items">
       {items?.map((Categories) => {
         return (
           <Box
             sx={{
               display: "flex",
-              paddingTop: {
-                md: "20px",
-                sm: "20px",
-                xs: "20px",
-              },
             }}
           >
             <Typography component="p" style={margin}>
@@ -96,6 +91,6 @@ export const CategoriesNavBarPage = () => {
           </Box>
         );
       })}
-    </>
+    </Box>
   );
 };

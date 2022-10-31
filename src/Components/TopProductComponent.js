@@ -1,80 +1,111 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
-import StarRateIcon from "@mui/icons-material/StarRate";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-import { useSelector } from "react-redux";
-function TopProductComponent() {
-  const items = useSelector((state) => state.products.items.FisrtProduct);
+import TopProductLists from "./TopProductsLists";
 
+export const TopProductComponent = () => {
   return (
-    <Box sx={{ paddingTop: "25px", border: "2px solid black", width: "100%" }}>
-      {items?.map((product) => {
-        return (
-          <Box
+    <Box
+      className="nav_bar nav_bars_items"
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        width: "100%",
+        justifyContent: "space-between",
+        marginTop: "30px",
+        marginBottom: "80px",
+        paddingLeft: "30px",
+        paddingRight: "80px",
+      }}
+    >
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+        }}
+      >
+        <Typography component="h1" className="mySaless">
+          <Typography
+            component="h1"
+            className="saled"
             sx={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: "20px",
-              width: "100%",
+              fontSize: "20px",
+              fontWeight: "bold",
+              marginBottom: "30px",
             }}
           >
-            <Box sx={{ background: "#F4F6FA", padding: "0px 12px" }}>
-              <img src={product.image} alt="product image" />
-            </Box>
-            <Box sx={{ paddingLeft: "10px" }}>
-              <Typography
-                variant="p"
-                sx={{
-                  color: "black",
-                  fontWeight: "bold",
-                  fontSize: "20px",
-                }}
-              >
-                {product.name}
-              </Typography>
-              <Typography
-                component="p"
-                sx={{ paddingTop: "4px", paddingBottom: "8px" }}
-              >
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#D4D4D4" }}>
-                  {<StarBorderIcon />}
-                </Typography>
-              </Typography>
-
-              <Box>
-                <Typography
-                  component="span"
-                  sx={{
-                    color: "#3BB77E",
-                    paddingRight: "10px",
-                    fontWeight: "bold",
-                    fontSize: "18px",
-                  }}
-                >
-                  $2
-                </Typography>
-                <Typography component="span" sx={{ color: "#ADADAD" }}>
-                  <s>$3.21</s>
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        );
-      })}
+            Top sells
+          </Typography>
+        </Typography>
+        <TopProductLists />
+      </Box>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+        }}
+      >
+        <Typography component="h1" className="mySaless">
+          <Typography
+            component="h1"
+            className="saled"
+            sx={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              marginBottom: "30px",
+            }}
+          >
+            Top Rated{" "}
+          </Typography>
+        </Typography>
+        <TopProductLists />
+      </Box>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+        }}
+      >
+        <Typography component="h1" className="mySaless">
+          <Typography
+            component="h1"
+            className="saled"
+            sx={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              marginBottom: "30px",
+            }}
+          >
+            Trending Items
+          </Typography>
+        </Typography>
+        <TopProductLists />
+      </Box>
+      <Box
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "25%",
+        }}
+      >
+        <Typography component="h1" className="mySaless">
+          <Typography
+            component="h1"
+            className="saled"
+            sx={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              marginBottom: "30px",
+            }}
+          >
+            Recently Added
+          </Typography>
+        </Typography>
+        <TopProductLists />
+      </Box>
     </Box>
   );
-}
-
-export default TopProductComponent;
+};

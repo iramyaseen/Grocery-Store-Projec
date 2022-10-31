@@ -1,10 +1,8 @@
 import "./css/index.css";
 import { Route, Routes } from "react-router-dom";
-import MainHomePage from "./Components/Pages2/MainHomePage";
-import { FruitsPage } from "./Components/Pages2/FruitsPage";
 import { Box } from "@mui/material";
-import Cart from "./Components/AddToCartItems";
-import { WishlistConponent } from "./Components/WishlistConponent";
+import { FruitsPage } from "./Components/Pages/FruitsPage";
+import { MainHomePage } from "./Components/Pages/MainHomePage";
 function App() {
   return (
     <Box>
@@ -14,11 +12,8 @@ function App() {
         <Route path="/Fruits" element={<FruitsPage />} />
         <Route path="/Coffe&teas" element={<FruitsPage />} />
         <Route path="/Meat" element={<FruitsPage />} />
-        <Route path="/cart-products" element={<Cart />} />
-        <Route path="/wishlist-products" element={<WishlistConponent />} />
       </Routes>
     </Box>
   );
 }
-
 export default App;

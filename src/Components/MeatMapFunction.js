@@ -4,11 +4,12 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../Images/Svg/SmallShopping.svg";
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { addToCart } from "../redux/cartSlice";
-export const CoffeteasMapFunction = () => {
+export const MeatMapFunction = () => {
+  const items = useSelector((state) => state.products.items.Meat);
   const settings = {
     dots: false,
     infinite: false,
@@ -43,7 +44,6 @@ export const CoffeteasMapFunction = () => {
       },
     ],
   };
-  const items = useSelector((state) => state.products.items.teaCoffy);
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
@@ -58,7 +58,11 @@ export const CoffeteasMapFunction = () => {
       <Slider {...settings}>
         {items?.map((name) => {
           return (
-            <Box key={name.id} className="border">
+            <Box
+              key={name.id}
+              className="border"
+              sx={{ border: "2px soild red" }}
+            >
               <Box
                 sx={{
                   paddingTop: "20px",
@@ -91,10 +95,7 @@ export const CoffeteasMapFunction = () => {
               >
                 {name.name}
               </Typography>
-              <Typography
-                component="p"
-                onClick={() => WishlisthandlerClick(name)}
-              >
+              <Typography component="p">
                 <Typography component="span" sx={{ color: "#FDC040" }}>
                   {<StarRateIcon />}
                 </Typography>

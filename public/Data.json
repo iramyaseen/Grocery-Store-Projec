@@ -236,6 +236,14 @@
       "type": "Vegetables"
     },
     {
+      "id": "8",
+      "image": "/Images/Products/image 3.png",
+      "name": "Peach",
+      "Items": "23 Items",
+      "bgColor": "#FEEFEA",
+      "type": "Fruits"
+    },
+    {
       "id": "2",
       "image": "/Images/Products/image 5.png",
       "name": "Strawberry",
@@ -260,6 +268,14 @@
       "type": "Fruits"
     },
     {
+      "id": "7",
+      "image": "/Images/Products/image 5.png",
+      "name": "Strawberry",
+      "Items": "23 Items",
+      "bgColor": "#F2FCE4",
+      "type": "Fruits"
+    },
+    {
       "id": "5",
       "image": "/Images/Products/image 8.png",
       "name": "Potato",
@@ -273,6 +289,14 @@
       "name": "Carrot",
       "Items": "23 Items",
       "bgColor": "#DEF9EC",
+      "type": "Vegetables"
+    },
+    {
+      "id": "8",
+      "image": "/Images/Products/image 8.png",
+      "name": "Potato",
+      "Items": "23 Items",
+      "bgColor": "#FFFCEB",
       "type": "Vegetables"
     }
   ],
@@ -621,6 +645,46 @@
       "type": "Fruits",
       "price": "2",
       "realPrice": "3.99"
+    },
+    {
+      "id": "9",
+      "image": "/Images/Rectangle 19.png",
+      "name": "Tomatos 200g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Fruits",
+      "price": "2",
+      "realPrice": "3.99"
+    },
+    {
+      "id": "10",
+      "image": "/Images/Rectangle 19.png",
+      "name": "Tomatos 200g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Fruits",
+      "price": "2",
+      "realPrice": "3.99"
+    },
+    {
+      "id": "9",
+      "image": "/Images/Rectangle 19.png",
+      "name": "Tomatos 200g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Fruits",
+      "price": "2",
+      "realPrice": "3.99"
+    },
+    {
+      "id": "10",
+      "image": "/Images/Rectangle 19.png",
+      "name": "Tomatos 200g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Fruits",
+      "price": "2",
+      "realPrice": "3.99"
     }
   ],
   "teaCoffy": [
@@ -714,6 +778,39 @@
     }
   ],
   "Meat": [
+    {
+      "id": "12",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "21",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
+    {
+      "id": "24",
+      "image": "/Images/SaleProducts/Rectangle 2.png",
+      "name": "Halal Sausage 350g",
+      "owner": "Mr.food",
+      "by": "By",
+      "type": "Meat",
+      "price": "20",
+      "realPrice": "25",
+      "sold": "20/50"
+    },
     {
       "id": "12",
       "image": "/Images/SaleProducts/Rectangle 2.png",

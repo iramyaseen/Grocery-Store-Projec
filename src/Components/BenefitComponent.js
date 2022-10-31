@@ -1,15 +1,17 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { ReactComponent as BestPrice } from "../../Images/Svg/BestPrice.svg";
-import { ReactComponent as RefoundAble } from "../../Images/Svg/refundabble.svg";
-import { ReactComponent as FreeDelivery } from "../../Images/Svg/freeDelivery.svg";
+import { ReactComponent as BestPrice } from "../Images/Svg/BestPrice.svg";
+import { ReactComponent as RefoundAble } from "../Images/Svg/refundabble.svg";
+import { ReactComponent as FreeDelivery } from "../Images/Svg/freeDelivery.svg";
 import { Typography } from "@mui/material";
 
-function BenefitsPage() {
+function BenefitComponent() {
   return (
     <Box
+      className="nav_bar"
       sx={{
         display: "flex",
+        flexWrap: "wrap",
         justifyContent: "space-between",
         marginTop: "80px",
         marginBottom: "20px",
@@ -62,4 +64,4 @@ function BenefitsPage() {
   );
 }
 
-export default BenefitsPage;
+export default BenefitComponent;

@@ -1,9 +1,9 @@
 import React from "react";
 import { Box } from "@mui/system";
 import { Button, Container, Typography } from "@mui/material";
-import AppStore from "../../Images/image 13.png";
-import GooglePlay from "../../Images/image 14.png";
-import App from "../../Images/App.png";
+import AppStore from "../Images/image 13.png";
+import GooglePlay from "../Images/image 14.png";
+import App from "../Images/App.png";
 
 function BottomHeroPage() {
   return (
@@ -13,7 +13,10 @@ function BottomHeroPage() {
         justifyContent: "space-around",
         alignItems: "center",
         background: "#C5EAD9",
+        paddingLeft: "30px",
+        paddingRight: "80px",
       }}
+      className="nav_bar"
     >
       <Container>
         <Typography
@@ -29,14 +32,14 @@ function BottomHeroPage() {
           Available on both IOS & Android
         </Typography>
         <Button>
-          <img src={AppStore} />
+          <img src={AppStore} alt="image" />
         </Button>
         <Button>
-          <img src={GooglePlay} />
+          <img src={GooglePlay} alt="image" />
         </Button>
       </Container>
       <Box sx={{ paddingTop: "80px" }}>
-        <img height="600px" src={App} />
+        <img height="600px" src={App} alt="image" />
       </Box>
     </Box>
   );

@@ -1,9 +1,9 @@
 import { Divider, InputBase, styled, Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import DropMeunBar from "./DropMeunBar";
 import { ReactComponent as SearchIcon } from "../Images/Svg/li_search.svg";
 import { useSelector } from "react-redux";
+import { DropDownMenuComponent } from "./DropDownMenuComponent";
 
 const BoxSearch = styled("div")({
   background: "#F3F3F3",
@@ -13,8 +13,8 @@ const BoxSearch = styled("div")({
   height: "52px",
   borderRadius: "5px 0px 0px 5px",
 });
-function SearchComponents() {
-  const [quary, setQuary] = useState("");
+export const SearchBarComponent = () => {
+  const [query, setQuery] = useState("");
   const [isActive, setisActive] = useState(false);
   const items = useSelector((state) => state.products.items.data);
   const clickHandler = () => {
@@ -22,44 +22,20 @@ function SearchComponents() {
   };
   return (
     <Box>
-      <Toolbar sx={{ alignItems: "center" }}>
+      <Toolbar>
         <BoxSearch>
-          <Toolbar
-            sx={{
-              minHeight: "10px",
-              paddingLeft: "0%",
-              paddingRight: "0%",
-            }}
-          >
-            <DropMeunBar />
+          <Toolbar>
+            <DropDownMenuComponent />
             <Divider orientation="vertical" variant="middle" flexItem />
           </Toolbar>
           <Toolbar
             sx={{
               maxWidth: "300px",
-              marginLeft: "15px",
-              width: {
-                sm: "200px",
-                marginRight: "55px",
-              },
-              marginRight: {
-                xs: "70px",
-              },
+              marginRight: "40px",
             }}
           >
             <InputBase
-              onChange={(e) => setQuary(e.target.value)}
-              sx={{
-                maxWidth: "300px",
-                marginLeft: "15px",
-                width: {
-                  sm: "200px",
-                  marginRight: "55px",
-                },
-                marginRight: {
-                  xs: "70px",
-                },
-              }}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Search here "
               onClick={clickHandler}
             />
@@ -76,14 +52,14 @@ function SearchComponents() {
           position: "absolute",
           paddingLeft: "30px",
           marginLeft: "25px",
-          width: "37.8%",
+          width: "21%",
         }}
       >
         {items
           ?.filter((val) => {
-            if (quary === "") {
+            if (query === "") {
               return val;
-            } else if (val.name.toLowerCase().includes(quary.toLowerCase())) {
+            } else if (val.name.toLowerCase().includes(query.toLowerCase())) {
               return val;
             }
           })
@@ -97,6 +73,4 @@ function SearchComponents() {
       </Box>
     </Box>
   );
-}
-
-export default SearchComponents;
+};

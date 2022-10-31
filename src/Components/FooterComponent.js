@@ -1,24 +1,25 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import LogoComponents from "../LogoComponents";
-import { ReactComponent as Address } from "../../Images/Svg/li_map-pin.svg";
-import { ReactComponent as CallPhone } from "../../Images/Svg/li_phone.svg";
-import { ReactComponent as Email } from "../../Images/Svg/li_mail.svg";
-import { ReactComponent as WorkHoure } from "../../Images/Svg/li_clock-9.svg";
+import { ReactComponent as Address } from "../Images/Svg/li_map-pin.svg";
+import { ReactComponent as CallPhone } from "../Images/Svg/li_phone.svg";
+import { ReactComponent as Email } from "../Images/Svg/li_mail.svg";
+import { ReactComponent as WorkHoure } from "../Images/Svg/li_clock-9.svg";
+import LogoComponent from "./LogoComponent";
 
-function FooterPage() {
+function FooterComponent() {
   return (
-    <Box>
+    <Box className="nav_bar">
       <Box
         sx={{
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "space-between",
           paddingLeft: "60px",
           paddingRight: "60px",
         }}
       >
         <Box sx={{ paddingTop: "40px", alignItems: "center" }}>
-          <LogoComponents />
+          <LogoComponent />
 
           <Typography
             component="p"
@@ -129,4 +130,4 @@ function FooterPage() {
   );
 }
 
-export default FooterPage;
+export default FooterComponent;

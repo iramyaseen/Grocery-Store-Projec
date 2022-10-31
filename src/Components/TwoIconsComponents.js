@@ -6,8 +6,9 @@ import { ReactComponent as Shopping } from "../Images/Svg/li_shopping-cart.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { AddToCardDropDown } from "./AddTopCardDropDown";
 
-function IconsImgComponent() {
+export const TwoIconsComponents = () => {
   const { cartTotalQuantity, cartTotalAmount } = useSelector(
     (state) => state.cart
   );
@@ -35,7 +36,7 @@ function IconsImgComponent() {
               height: "28px",
               lineHeight: "0.",
               left: "7%",
-              bottom: "24px",
+              bottom: "21px",
               background: "#3BB77E",
               border: "3px solid #FFFFFF",
               borderRadius: "50%",
@@ -63,8 +64,8 @@ function IconsImgComponent() {
             width: "28px",
             height: "28px",
             lineHeight: "0.",
-            left: "61%",
-            bottom: "24px",
+            left: "60%",
+            bottom: "21px",
             background: "#3BB77E",
             border: "3px solid #FFFFFF",
             borderRadius: "50%",
@@ -77,33 +78,18 @@ function IconsImgComponent() {
           {cartTotalQuantity}
         </Typography>
         <Box>
-          <NavLink to="/cart-products" style={{ textDecoration: "none" }}>
-            <Typography
-              sx={{
-                paddingLeft: "15px",
-                fontSize: "15px",
-                color: "#253D4E",
-                fontWeight: "500",
-              }}
-            >
-              My cart
-            </Typography>
-            <Typography
-              sx={{
-                paddingLeft: "15px",
-                fontSize: "15px",
-                color: "#3BB77E",
-                fontWeight: "bold",
-              }}
-            >
-              ${cartTotalAmount}
-            </Typography>
-          </NavLink>
+          <Typography
+            sx={{
+              paddingLeft: "15px",
+              fontSize: "15px",
+              color: "#253D4E",
+              fontWeight: "500",
+            }}
+          >
+            <AddToCardDropDown />
+          </Typography>
         </Box>
-        <ExpandMoreIcon id="change" style={{ cursor: "pointer" }} />
       </Box>
     </Box>
   );
-}
-
-export default IconsImgComponent;
+};

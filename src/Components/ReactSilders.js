@@ -1,14 +1,16 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
-import StarRateIcon from "@mui/icons-material/StarRate";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-import { ReactComponent as Shopping } from "../Images/Svg/SmallShopping.svg";
-import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
-export const CoffeteasMapFunction = () => {
+import { Box } from "@mui/system";
+import { Button, Typography } from "@mui/material";
+import StarRateIcon from "@mui/icons-material/StarRate";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import { ReactComponent as Shopping } from "../Images/Svg/SmallShopping.svg";
+
+export const Silder = () => {
   const settings = {
     dots: false,
     infinite: false,
@@ -43,7 +45,8 @@ export const CoffeteasMapFunction = () => {
       },
     ],
   };
-  const items = useSelector((state) => state.products.items.teaCoffy);
+  const items = useSelector((state) => state.products.items.SecondProduct);
+
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));

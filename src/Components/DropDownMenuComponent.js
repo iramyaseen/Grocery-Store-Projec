@@ -1,10 +1,14 @@
-import * as React from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-export default function AvatarDropDown(name) {
+import { useSelector } from "react-redux";
+import { Box } from "@mui/system";
+import { NavLink } from "react-router-dom";
+export const DropDownMenuComponent = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const items = useSelector((state) => state.products.items.Categories);
 
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -13,9 +17,8 @@ export default function AvatarDropDown(name) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   return (
-    <div>
+    <Box>
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -30,7 +33,7 @@ export default function AvatarDropDown(name) {
           fontWeight: "bold",
         }}
       >
-        Ramzi Cherif
+        All Categories
         <ExpandMoreIcon id="change" />
       </Button>
       <Menu
@@ -42,10 +45,25 @@ export default function AvatarDropDown(name) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>Setting</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        {items?.map((cate, key) => {
+          return (
+            <Box key={key}>
+              <MenuItem onClick={handleClose}>
+                <NavLink to="/Vegetables">{cate.val2}</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <NavLink to="/Fruits">{cate.val3}</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <NavLink to="/Coffe&teas">{cate.val4}</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <NavLink to="/Meat">{cate.val5}</NavLink>
+              </MenuItem>
+            </Box>
+          );
+        })}
       </Menu>
-    </div>
+    </Box>
   );
-}
+};

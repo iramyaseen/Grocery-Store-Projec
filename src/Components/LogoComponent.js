@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import logoImage from "../Images/svgexport-6 1.png";
 import { NavLink } from "react-router-dom";
 
-function LogoComponents() {
+function LogoComponent() {
   return (
     <Toolbar>
       <Box component="img" src={logoImage}></Box>
@@ -40,4 +40,4 @@ function LogoComponents() {
   );
 }
 
-export default LogoComponents;
+export default LogoComponent;
