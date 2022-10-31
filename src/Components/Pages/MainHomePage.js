@@ -7,7 +7,7 @@ import DailyBestSaleComponent from "../DailyBestSaleComponent";
 import { DiscountComponent } from "../DiscountComponent";
 import { ExploreCate } from "../ExploreComponent";
 import { FeaturedProductsPage } from "../FeactureProduct";
-import { CategoryItemsCarousel } from "../CategoryItemsCarousel";
+import { CategoryItemsCarousel } from "../categoryItemsCarousel";
 import FooterComponent from "../FooterComponent";
 import { HeroComponent } from "../HeroComponent";
 import { NavBarComponents } from "../NavBarComponents";
