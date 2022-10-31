@@ -1,96 +1,38 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-const margin = {
-  marginRight: "30px",
-};
 
-export const CategoriesNavBar = () => {
-  const items = useSelector((state) => state.products.items.Categories);
+export const CategoriesNavBar = (props) => {
+  const { currentSelectedItem, setNavCategoryItem, items } = props;
+
+  const navItemStyle = {
+    textDecoration: "none",
+    fontWeight: "bold",
+    cursor: "pointer",
+  };
+
+  const activeNavItemStyle = {
+    ...navItemStyle,
+    color: "#3BB77E",
+  };
+
   return (
-    <Box className="items">
-      {items?.map((Categories) => {
+    <Box className="items" sx={{ display: "flex" }}>
+      {items?.map((category) => {
         return (
-          <Box
-            sx={{
-              display: "flex",
-            }}
-          >
-            <Typography component="p" style={margin}>
-              <NavLink
-                to="/"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#3BB77E" : "black",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  };
-                }}
-              >
-                {Categories.val1}
-              </NavLink>
-            </Typography>
-            <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink
-                to={`/Vegetables`}
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#3BB77E" : "black",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  };
-                }}
-              >
-                {Categories.val2}
-              </NavLink>
-            </Typography>
-            <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink
-                to="/Fruits"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#3BB77E" : "black",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  };
-                }}
-              >
-                {Categories.val3}
-              </NavLink>
-            </Typography>
-            <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink
-                to="/Coffe&teas"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#3BB77E" : "black",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  };
-                }}
-              >
-                {Categories.val4}
-              </NavLink>
-            </Typography>
-            <Typography component="p" style={margin} sx={{ cursor: "pointer" }}>
-              <NavLink
-                to="/Meat"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#3BB77E" : "black",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  };
-                }}
-              >
-                {Categories.val5}
-              </NavLink>
-            </Typography>
-          </Box>
+          <Typography component="p" style={{ marginRight: "30px" }}>
+            <span
+              onClick={() => setNavCategoryItem(category)}
+              // prettier-ignore
+              style={category === currentSelectedItem ? activeNavItemStyle : navItemStyle}
+            >
+              {category}
+            </span>
+          </Typography>
         );
       })}
     </Box>
   );
 };
+
+export default CategoriesNavBar;

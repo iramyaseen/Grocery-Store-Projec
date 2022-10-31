@@ -3,11 +3,9 @@ import React from "react";
 import BenefitComponent from "../BenefitComponent";
 import BottomHeroPage from "../BottomHeroComponent";
 import CopyWriteComponent from "../CopyWriteComponent";
-import DailyBestSaleComponent from "../DailyBestSaleComponent";
 import { DiscountComponent } from "../DiscountComponent";
 import { ExploreCate } from "../ExploreComponent";
-import { FeaturedProductsPage } from "../FeactureProduct";
-import { CategoryItemsCarousel } from "../categoryItemsCarousel";
+import CategoryItemsCarousel from "../categoryItemsCarousel";
 import FooterComponent from "../FooterComponent";
 import { HeroComponent } from "../HeroComponent";
 import { NavBarComponents } from "../NavBarComponents";
@@ -22,11 +20,9 @@ export const MainHomePage = () => {
       <SecondNavbarComponent />
       <HeroComponent />
       <ExploreCate />
-      {/* <FeaturedProductsPage /> */}
       <CategoryItemsCarousel heading="Featured Products" />
       <CategoryItemsCarousel heading="Daily Best Sales" />
       <DiscountComponent />
-      {/* <DailyBestSaleComponent /> */}
       <TopProductComponent />
       <BottomHeroPage />
       <BenefitComponent />
