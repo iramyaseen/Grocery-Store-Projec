@@ -553,15 +553,7 @@
     }
   ],
 
-  "Categories": [
-    {
-      "val1": "All",
-      "val2": "Vegetables",
-      "val3": "Fruits",
-      "val4": "Coffe & teas",
-      "val5": "Meat"
-    }
-  ],
+  "Categories": ["All", "Vegetables", "Fruits", "Coffe & teas", "Meat"],
 
   "firstVagetable": [
     {
