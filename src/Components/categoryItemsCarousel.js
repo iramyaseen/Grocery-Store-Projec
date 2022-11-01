@@ -7,7 +7,7 @@ import ProductCarousel from "./productCarousel";
 const CategoryItemsCarousel = ({ heading }) => {
   const items = useSelector((state) => state.products.items.Categories);
 
-  const [navCategoryItem, setNavCategoryItem] = useState(items[0] ?? "All");
+  const [navCategoryItem, setNavCategoryItem] = useState("All");
 
   return (
     <Box className="nav_bar" sx={{ width: "100%" }}>
