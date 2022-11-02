@@ -1,5 +1,3 @@
-// import "./assets/css/index.css";
-// import { Route, Routes } from "react-router-dom";
 import { Box, Divider } from "@mui/material";
 import { useSelector } from "react-redux";
 import { SecondNavBarComponent } from "./BrowerComponent/SecondNavBarComponent";
@@ -45,13 +43,6 @@ function App() {
       <FooterComponent />
       <Divider />
       <CopyWriteComponent />
-      {/* <Routes>
-        <Route path="/" element={<MainHomePage />} />
-        <Route path="/Vegetables" element={<FruitsPage />} />
-        <Route path="/Fruits" element={<FruitsPage />} />
-        <Route path="/Coffe&teas" element={<FruitsPage />} />
-        <Route path="/Meat" element={<FruitsPage />} />
-      </Routes> */}
     </Box>
   );
 }

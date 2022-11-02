@@ -42,6 +42,7 @@ function BottomHeroComponent() {
         sx={{
           paddingTop: "80px",
           display: {
+            lg: "flex",
             md: "none",
             xs: "none",
           },
