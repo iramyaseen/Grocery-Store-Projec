@@ -3,10 +3,11 @@ import { Box, Button, Typography } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../assets/Images/Svg/SmallShopping.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { addToCart } from "../Context/cartSlice";
 export const FirstFruitesMapFunction = () => {
   const settings = {
     dots: false,
@@ -43,6 +44,11 @@ export const FirstFruitesMapFunction = () => {
     ],
   };
   const items = useSelector((state) => state.products.items.firstVagetable);
+  const dispatch = useDispatch();
+  const handlerClick = (product) => {
+    dispatch(addToCart(product));
+    alert("Your order is add to cart");
+  };
   return (
     <div className="App">
       <Slider {...settings}>
@@ -167,6 +173,7 @@ export const FirstFruitesMapFunction = () => {
                         textTransform: "capitalize",
                         paddingLeft: "5px",
                       }}
+                      onClick={() => handlerClick(name)}
                     >
                       Add
                     </span>

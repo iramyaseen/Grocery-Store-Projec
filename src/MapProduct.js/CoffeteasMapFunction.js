@@ -44,6 +44,7 @@ export const CoffeteasMapFunction = () => {
     ],
   };
   const items = useSelector((state) => state.products.items.teaCoffy);
+
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
