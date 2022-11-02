@@ -9,6 +9,10 @@ import { HeroImageComponent } from "./Components/HeroImageComponent";
 import { TopProductComponent } from "./TopProducts/TopProductComponent";
 import { ExploreCate } from "./ExploreProducts/ExploreProduct";
 import { NavBarComponents } from "./NavBar/NavBarComponent";
+import BottomHeroComponent from "./Components/BottomHeroComponent";
+import BenefitComponent from "./Components/BenefitComponent";
+import FooterComponent from "./Components/FooterComponent";
+import CopyWriteComponent from "./Components/CopyWriteComponent";
 function App() {
   const secondProduct = useSelector(
     (state) => state.products.items.SecondProduct
@@ -35,6 +39,12 @@ function App() {
         products={thirdProduct}
       />
       <TopProductComponent />
+      <BottomHeroComponent />
+      <BenefitComponent />
+      <Divider />
+      <FooterComponent />
+      <Divider />
+      <CopyWriteComponent />
       {/* <Routes>
         <Route path="/" element={<MainHomePage />} />
         <Route path="/Vegetables" element={<FruitsPage />} />

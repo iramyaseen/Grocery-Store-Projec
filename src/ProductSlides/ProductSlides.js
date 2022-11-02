@@ -7,7 +7,7 @@ import { Silder } from "./Silders";
 
 export const ProductSlides = ({ page, products }) => {
   return (
-    <div className="App">
+    <div className="App2">
       {page === "Vegetables" ? (
         <FirstFruitesMapFunction />
       ) : page === "Fruits" ? (

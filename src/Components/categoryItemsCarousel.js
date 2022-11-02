@@ -16,10 +16,9 @@ const CategoryItemsCarousel = ({ heading, products }) => {
         sx={{
           display: "flex",
           width: "100%",
-          textAlign: "center",
           justifyContent: "space-between",
-          paddingLeft: "80px",
-          paddingRight: "80px",
+          paddingLeft: "50px",
+          paddingRight: "60px",
           paddingTop: "80px",
           paddingBottom: "25px",
         }}
@@ -31,12 +30,7 @@ const CategoryItemsCarousel = ({ heading, products }) => {
           items={items}
         />
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
+      <Box>
         <ProductSlides page={navCategoryItem} products={products} />
       </Box>
     </Box>

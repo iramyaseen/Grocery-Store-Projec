@@ -14,7 +14,7 @@ export const ExploreCate = () => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          paddingLeft: "75px",
+          paddingLeft: "50px",
           paddingRight: "60px",
           paddingTop: "80px",
           paddingBottom: "25px",
@@ -37,7 +37,6 @@ export const ExploreCate = () => {
         />
       </Box>
       <ExploerSilder />
-      {/* <ExploerSilder /> */}
     </Box>
   );
 };

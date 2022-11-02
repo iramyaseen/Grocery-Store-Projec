@@ -15,7 +15,7 @@ export const DiscountComponent = () => {
         },
         justifyContent: "space-between",
         paddingTop: "80px",
-        paddingRight: "50px",
+        paddingRight: "60px",
         paddingLeft: "50px",
       }}
     >
@@ -29,6 +29,7 @@ export const DiscountComponent = () => {
           paddingLeft: "44px",
           paddingTop: "33px",
           paddingRight: "44px",
+          marginBottom: "30px",
         }}
       >
         <Box>
