@@ -1,15 +1,18 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
-import { ReactComponent as RightArrow } from "../Images/Svg/li_arrow-right.svg";
-import image from "../Images/Offer1-img.png";
-import discountHeroImage from "../Images/Offer2-img.png";
+import { ReactComponent as RightArrow } from "../assets/Images/Svg/li_arrow-right.svg";
+import image from "../assets/Images/Offer1-img.png";
+import discountHeroImage from "../assets/Images/Offer2-img.png";
 
 export const DiscountComponent = () => {
   return (
     <Box
       className="nav_bar discount_components"
       sx={{
-        display: "flex",
+        display: {
+          lg: "flex",
+          md: "block",
+        },
         justifyContent: "space-between",
         paddingTop: "80px",
         paddingRight: "50px",

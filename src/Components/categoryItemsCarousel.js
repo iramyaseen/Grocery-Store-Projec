@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import { CategoriesNavBar } from "./CateNavBarComponent";
 import { useSelector } from "react-redux";
-import ProductCarousel from "./productCarousel";
+import CategoriesNavBar from "./CateNavBar";
+import { ProductSlides } from "../ProductSlides/ProductSlides";
 
-const CategoryItemsCarousel = ({ heading }) => {
+const CategoryItemsCarousel = ({ heading, products }) => {
   const items = useSelector((state) => state.products.items.Categories);
 
-  const [navCategoryItem, setNavCategoryItem] = useState(items[0] ?? "All");
+  const [navCategoryItem, setNavCategoryItem] = useState("All");
 
   return (
     <Box className="nav_bar" sx={{ width: "100%" }}>
@@ -37,7 +37,7 @@ const CategoryItemsCarousel = ({ heading }) => {
           justifyContent: "space-between",
         }}
       >
-        <ProductCarousel page={navCategoryItem} />
+        <ProductSlides page={navCategoryItem} products={products} />
       </Box>
     </Box>
   );

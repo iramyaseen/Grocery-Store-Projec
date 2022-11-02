@@ -5,9 +5,9 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-import productSlice, { productsFetch } from "./redux/productSlice";
-import { productApi } from "./redux/productApi";
-import cartSlice, { getTotals } from "./redux/cartSlice";
+import productSlice, { productsFetch } from "./Context/productSlice";
+import { productApi } from "./Context/productApi";
+import cartSlice, { getTotals } from "./Context/cartSlice";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const store = configureStore({
   reducer: {
