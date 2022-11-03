@@ -11,17 +11,15 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import {
-  addToCart,
-  clearCart,
-  decreaseCart,
-  getTotals,
-  removeFromCart,
-} from "../Context/cartSlice";
+  addToWish,
+  clearWisht,
+  decreaseWish,
+  getTotalsWish,
+  removeFromWish,
+} from "../Context/wishlist";
 
 export const WishlistDropDownCart = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const items = useSelector((state) => state.products.items.Categories);
-
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -29,27 +27,27 @@ export const WishlistDropDownCart = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const { cartTotalAmount } = useSelector((state) => state.cart);
+  const { wishTotalAmount } = useSelector((state) => state.wish);
 
-  const cart = useSelector((state) => state.cart);
+  const wish = useSelector((state) => state.wish);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getTotals());
-  }, [cart]);
+    dispatch(getTotalsWish());
+  }, [wish]);
 
   const handleRemoveFromCart = (cartItem) => {
-    dispatch(removeFromCart(cartItem));
+    dispatch(removeFromWish(cartItem));
   };
 
   const handleDecreaseCart = (cartItem) => {
-    dispatch(decreaseCart(cartItem));
+    dispatch(decreaseWish(cartItem));
   };
   const handleAddToCart = (cartItem) => {
-    dispatch(addToCart(cartItem));
+    dispatch(addToWish(cartItem));
   };
   const handleClearCart = (cartItem) => {
-    dispatch(clearCart(cartItem));
+    dispatch(clearWisht(cartItem));
   };
   return (
     <Box>
@@ -81,7 +79,7 @@ export const WishlistDropDownCart = () => {
               },
             }}
           >
-            ${cartTotalAmount}
+            ${wishTotalAmount}
           </Typography>
         </Box>
         <ExpandMoreIcon id="change" style={{ cursor: "pointer" }} />
@@ -98,7 +96,7 @@ export const WishlistDropDownCart = () => {
       >
         <MenuItem onClick={handleClose}>
           <div className="cart-container" style={{ padding: "10px" }}>
-            {cart.cartItems.length === 0 ? (
+            {wish.cartItems.length === 0 ? (
               <div className="cart-empty">
                 <p>Your cart is currently empty</p>
                 <div className="start-shopping">
@@ -123,8 +121,8 @@ export const WishlistDropDownCart = () => {
             ) : (
               <div>
                 <div className="cart-items">
-                  {cart.cartItems &&
-                    cart.cartItems.map((cartItem) => (
+                  {wish.cartItems &&
+                    wish.cartItems.map((cartItem) => (
                       <div className="cart-item" key={cartItem.id}>
                         <div className="cart-product">
                           <img src={cartItem.image} alt={cartItem.name} />
@@ -165,7 +163,7 @@ export const WishlistDropDownCart = () => {
                   <div className="cart-checkout">
                     <div className="subtotal">
                       <span>Total</span>
-                      <span className="amount">${cart.cartTotalAmount}</span>
+                      <span className="amount">${wish.cartTotalAmount}</span>
                     </div>
                   </div>
                 </div>

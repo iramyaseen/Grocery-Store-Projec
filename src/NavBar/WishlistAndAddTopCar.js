@@ -12,7 +12,10 @@ export const WishlistAndAddTopCart = () => {
   const { cartTotalQuantity, cartTotalAmount } = useSelector(
     (state) => state.cart
   );
-  console.log(cartTotalAmount);
+  const { wishTotalQuantity, wishTotalAmount } = useSelector(
+    (state) => state.wish
+  );
+  console.log(wishTotalQuantity);
   return (
     <Box
       sx={{
@@ -46,7 +49,7 @@ export const WishlistAndAddTopCart = () => {
             fontSize: "14px",
           }}
         >
-          {cartTotalQuantity}
+          {wishTotalQuantity}
         </Typography>
         <Box>
           <Typography

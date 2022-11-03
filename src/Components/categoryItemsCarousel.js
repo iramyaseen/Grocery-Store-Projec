@@ -12,7 +12,7 @@ const CategoryItemsCarousel = ({ heading, products }) => {
   return (
     <Box className="nav_bar" sx={{ width: "100%" }}>
       <Box
-        className="nav_bars_items Navbar_component"
+        className="nav_bars_items"
         sx={{
           display: "flex",
           width: "100%",

@@ -9,6 +9,7 @@ import { Button, Typography } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../assets/Images/Svg/SmallShopping.svg";
+import { addToWish } from "../Context/wishlist";
 
 export const Silder = ({ products }) => {
   const settings = {
@@ -52,7 +53,7 @@ export const Silder = ({ products }) => {
     alert("Your order is add to cart");
   };
   const WishlisthandlerClick = (product) => {
-    dispatch(addToCart(product));
+    dispatch(addToWish(product));
     alert("Your product is add to wishlist");
   };
   return (
