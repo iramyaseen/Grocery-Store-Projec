@@ -363,7 +363,7 @@ none {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 862px) {
   .hida_component {
     display: flex !important;
   }
