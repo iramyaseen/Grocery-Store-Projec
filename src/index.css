@@ -547,7 +547,14 @@ none {
 .searchBsr {
   display: none;
 }
-
-/* .top_product {
-  background-color: red;
-} */
+.bar {
+  display: none;
+}
+@media (max-width: 882px) {
+  .logo_images {
+    margin: 0% auto !important;
+  }
+  .bar {
+    display: flex;
+  }
+}

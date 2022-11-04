@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { ReactComponent as Heart } from "../assets/Images/Svg/li_heart.svg";
 import { ReactComponent as Shopping } from "../assets/Images/Svg/li_shopping-cart.svg";
-import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AddToCardDropDown } from "./AddToCardDropDown";
 import { WishlistDropDownCart } from "./WishListDropDownCart";
@@ -15,7 +14,6 @@ export const WishlistAndAddTopCart = () => {
   const { wishTotalQuantity, wishTotalAmount } = useSelector(
     (state) => state.wish
   );
-  console.log(wishTotalQuantity);
   return (
     <Box
       sx={{

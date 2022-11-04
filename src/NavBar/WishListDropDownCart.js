@@ -9,7 +9,6 @@ import { NavLink } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import {
   addToWish,
   clearWisht,
@@ -17,7 +16,6 @@ import {
   getTotalsWish,
   removeFromWish,
 } from "../Context/wishlist";
-
 export const WishlistDropDownCart = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -28,18 +26,14 @@ export const WishlistDropDownCart = () => {
     setAnchorEl(null);
   };
   const { wishTotalAmount } = useSelector((state) => state.wish);
-
   const wish = useSelector((state) => state.wish);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getTotalsWish());
   }, [wish]);
-
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromWish(cartItem));
   };
-
   const handleDecreaseCart = (cartItem) => {
     dispatch(decreaseWish(cartItem));
   };
