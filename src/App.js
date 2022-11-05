@@ -1,4 +1,5 @@
-import { Box, Divider } from "@mui/material";
+import React from "react";
+import { Box, Divider, IconButton, Snackbar } from "@mui/material";
 import { useSelector } from "react-redux";
 import { SecondNavBarComponent } from "./BrowerComponent/SecondNavBarComponent";
 import CategoryItemsCarousel from "./Components/CategoryItemsCarousel";
@@ -11,6 +12,8 @@ import BottomHeroComponent from "./Components/BottomHeroComponent";
 import BenefitComponent from "./Components/BenefitComponent";
 import FooterComponent from "./Components/FooterComponent";
 import CopyWriteComponent from "./Components/CopyWriteComponent";
+import CloseIcon from "@mui/icons-material/Close";
+
 function App() {
   const secondProduct = useSelector(
     (state) => state.products.items.SecondProduct

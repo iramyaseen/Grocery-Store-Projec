@@ -76,7 +76,7 @@ export const {
   addToWish,
   removeFromWish,
   decreaseWish,
-  clearWisht,
+  clearWish,
   getTotalsWish,
 } = wishlistSlice.actions;
 

@@ -503,6 +503,10 @@ none {
   font-weight: 500;
   padding-top: 2px;
 }
+.css-1eqdgzv-MuiPaper-root-MuiSnackbarContent-root {
+  background: #3bb77e !important;
+  font-weight: bolder !important;
+}
 .linkes {
   text-decoration: none !important;
   font-size: 16px !important;

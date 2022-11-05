@@ -27,7 +27,12 @@ export const WishlistAndAddTopCart = () => {
         },
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Heart />
         <Typography
           component="span"
