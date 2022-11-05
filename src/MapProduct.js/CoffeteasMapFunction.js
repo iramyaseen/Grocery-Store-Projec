@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { addToCart } from "../Context/cartSlice";
+import { toast } from "react-toastify";
 export const CoffeteasMapFunction = () => {
   const settings = {
     dots: false,
@@ -48,11 +49,11 @@ export const CoffeteasMapFunction = () => {
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your order is add to cart");
+    const notify = () => toast("Your product is add to cart!");
   };
   const WishlisthandlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your product is add to wishlist");
+    const notify = () => toast("Your product is add to cart!");
   };
   return (
     <div className="App">

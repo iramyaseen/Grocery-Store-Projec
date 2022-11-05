@@ -94,7 +94,7 @@ export const AddToCardDropDown = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem>
           <div className="cart-container" style={{ padding: "10px" }}>
             {cart.cartItems.length === 0 ? (
               <div className="cart-empty">
@@ -109,16 +109,13 @@ export const AddToCardDropDown = () => {
                         <div className="cart-product">
                           <img src={cartItem.image} alt={cartItem.name} />
                           <div>
-                            <h3>{cartItem.name}</h3>
+                            <h5>{cartItem.name}</h5>
                             <button
                               onClick={() => handleRemoveFromCart(cartItem)}
                             >
                               Remove
                             </button>
                           </div>
-                        </div>
-                        <div className="cart-product-price">
-                          ${cartItem.price}
                         </div>
                         <div className="cart-product-quantity">
                           <button onClick={() => handleDecreaseCart(cartItem)}>
@@ -129,6 +126,7 @@ export const AddToCardDropDown = () => {
                             +
                           </button>
                         </div>
+
                         <div className="cart-product-total-price">
                           ${cartItem.price * cartItem.cartQuantity}
                         </div>

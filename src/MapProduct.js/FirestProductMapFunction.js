@@ -47,7 +47,6 @@ export const FirstFruitesMapFunction = () => {
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your order is add to cart");
   };
   return (
     <div className="App">

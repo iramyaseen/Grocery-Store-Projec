@@ -109,7 +109,7 @@ export const WishlistDropDownCart = () => {
                         <div className="cart-product">
                           <img src={cartItem.image} alt={cartItem.name} />
                           <div>
-                            <h3>{cartItem.name}</h3>
+                            <h5>{cartItem.name}</h5>
                             <button
                               onClick={() => handleRemoveFromCart(cartItem)}
                             >

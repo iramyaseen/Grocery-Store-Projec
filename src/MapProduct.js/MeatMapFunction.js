@@ -47,7 +47,6 @@ export const MeatMapFunction = () => {
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your order is add to cart");
   };
   const WishlisthandlerClick = (product) => {
     dispatch(addToCart(product));
