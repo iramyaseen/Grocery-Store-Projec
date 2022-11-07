@@ -9,15 +9,15 @@ import { ReactComponent as LinkedIn } from "../assets/Images/Svg/linkedIn.svg";
 function CopyWriteComponent() {
   return (
     <Box
-      className="nav_bar"
+      className="nav_bar nav_bars_items Navbar_component "
       sx={{
         paddingLeft: "60px",
         paddingRight: "60px",
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-between",
-        marginTop: "30px",
-        marginBottom: "30px",
+        paddingTop: "30px",
+        paddingBottom: "30px",
         alignItems: "center",
       }}
     >

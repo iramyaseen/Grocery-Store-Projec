@@ -16,9 +16,9 @@ function BottomHeroComponent() {
         paddingLeft: "26px",
         paddingRight: "60px",
       }}
-      className="nav_bar"
+      className="nav_bars_items"
     >
-      <Container sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
+      <Box sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
         <Typography
           variant="h3"
           sx={{ color: "#253D4E", fontWeight: "700", fontSize: "55px" }}
@@ -34,10 +34,10 @@ function BottomHeroComponent() {
         <Button>
           <img src={AppStore} alt="product" />
         </Button>
-        <Button>
+        <Button className="responsive_btn">
           <img src={GooglePlay} alt="product" />
         </Button>
-      </Container>
+      </Box>
       <Box
         sx={{
           paddingTop: "80px",

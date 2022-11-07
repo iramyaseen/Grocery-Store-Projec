@@ -23,7 +23,7 @@ export const FirstFruitesMapFunction = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -53,11 +53,7 @@ export const FirstFruitesMapFunction = () => {
       <Slider {...settings}>
         {items?.map((name) => {
           return (
-            <Box
-              key={name.id}
-              className="border"
-              sx={{ border: "2px soild red" }}
-            >
+            <Box key={name.id} className="border">
               <Box
                 sx={{
                   paddingTop: "20px",

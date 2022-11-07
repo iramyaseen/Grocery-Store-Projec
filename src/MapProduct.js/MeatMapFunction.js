@@ -24,7 +24,7 @@ export const MeatMapFunction = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -47,10 +47,6 @@ export const MeatMapFunction = () => {
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
-  };
-  const WishlisthandlerClick = (product) => {
-    dispatch(addToCart(product));
-    alert("Your product is add to wishlist");
   };
   return (
     <div className="App">

@@ -7,7 +7,7 @@ import discountHeroImage from "../assets/Images/Offer2-img.png";
 export const DiscountComponent = () => {
   return (
     <Box
-      className="nav_bar discount_components"
+      className="nav_bar discount_components nav_bars_items Navbar_component "
       sx={{
         display: {
           lg: "flex",
@@ -20,16 +20,25 @@ export const DiscountComponent = () => {
       }}
     >
       <Box
+        className="responsive_padding"
         sx={{
           background: "#FFF5E1D9",
-          width: "600px",
+          width: {
+            lg: "600px",
+            md: "100%",
+          },
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           paddingLeft: "44px",
           paddingTop: "33px",
           paddingRight: "44px",
-          marginBottom: "30px",
+          marginBottom: {
+            lg: "0",
+            md: "30px",
+            sm: "30px",
+            xs: "30px",
+          },
         }}
       >
         <Box>
@@ -90,12 +99,16 @@ export const DiscountComponent = () => {
       <Box
         sx={{
           background: "#D2EFE1",
-          width: "600px",
+          width: {
+            lg: "600px",
+            md: "100%",
+          },
           display: "flex",
           justifyContent: "space-between",
           paddingTop: "33px",
           paddingLeft: "44px",
         }}
+        className="responsive_padding"
       >
         <Box>
           <Button

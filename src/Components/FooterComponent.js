@@ -8,8 +8,9 @@ import { ReactComponent as WorkHoure } from "../assets/Images/Svg/li_clock-9.svg
 
 function FooterComponent() {
   return (
-    <Box className="nav_bar">
+    <Box className="nav_bar Navbar_component ">
       <Box
+        className="nav_bars_items"
         sx={{
           display: "flex",
           flexWrap: "wrap",

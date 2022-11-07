@@ -2,10 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../Context/cartSlice";
 import { Box } from "@mui/system";
-import { Alert, AlertTitle, Button, Stack, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../assets/Images/Svg/SmallShopping.svg";
@@ -27,7 +27,7 @@ export const Silder = ({ products }) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -49,10 +49,10 @@ export const Silder = ({ products }) => {
   };
 
   const dispatch = useDispatch();
-  const handlerClick = (product, reason, e) => {
+  const handlerClick = (product) => {
     dispatch(addToCart(product));
   };
-  const WishlisthandlerClick = (product, reason) => {
+  const WishlisthandlerClick = (product) => {
     dispatch(addToWish(product));
   };
   const notify = () => toast("Your product is add to cart!");
@@ -196,25 +196,6 @@ export const Silder = ({ products }) => {
           );
         })}
       </Slider>
-      {/* {onClick=>{ WishlisthandlerClick} ? (
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={handleClose}
-          message={"d"}
-          action={action}
-        />
-      ) : handlerClick ? (
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={handleClose}
-          message={"dddd"}
-          action={action}
-        />
-      ) : (
-        ""
-      )} */}
       <ToastContainer />
     </div>
   );

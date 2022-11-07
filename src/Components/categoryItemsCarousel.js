@@ -10,9 +10,9 @@ const CategoryItemsCarousel = ({ heading, products }) => {
   const [navCategoryItem, setNavCategoryItem] = useState("All");
 
   return (
-    <Box className="nav_bar" sx={{ width: "100%" }}>
+    <Box className="nav_bar Navbar_component " sx={{ width: "100%" }}>
       <Box
-        className="nav_bars_items"
+        className="nav_bars_items "
         sx={{
           display: "flex",
           width: "100%",
@@ -23,7 +23,12 @@ const CategoryItemsCarousel = ({ heading, products }) => {
           paddingBottom: "25px",
         }}
       >
-        <span style={{ fontSize: "30px", fontWeight: "600" }}>{heading}</span>
+        <span
+          className="responsive_font  "
+          style={{ fontSize: "30px", fontWeight: "600" }}
+        >
+          {heading}
+        </span>
         <CategoriesNavBar
           currentSelectedItem={navCategoryItem}
           setNavCategoryItem={setNavCategoryItem}

@@ -17,10 +17,17 @@ export const CategoriesNavBar = (props) => {
   };
 
   return (
-    <Box className="items" sx={{ display: "flex" }}>
+    <Box className="items " sx={{ display: "flex" }}>
       {items?.map((category) => {
         return (
-          <Typography component="p" style={{ marginRight: "30px" }}>
+          <Typography
+            className="responsive_margin"
+            component="p"
+            style={{
+              marginRight: "30px",
+            }}
+            key={category}
+          >
             <span
               onClick={() => setNavCategoryItem(category)}
               // prettier-ignore

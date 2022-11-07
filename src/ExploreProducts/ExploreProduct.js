@@ -27,6 +27,7 @@ export const ExploreCate = () => {
             paddingBottom: "20px",
             fontWeight: "600",
           }}
+          className="responsive_font"
         >
           Explore Categories
         </span>

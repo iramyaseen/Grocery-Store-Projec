@@ -8,13 +8,13 @@ import { Typography } from "@mui/material";
 function BenefitComponent() {
   return (
     <Box
-      className="nav_bar"
+      className="nav_bar nav_bars_items Navbar_component "
       sx={{
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-between",
-        marginTop: "80px",
-        marginBottom: "20px",
+        paddingTop: "80px",
+        paddingBottom: "20px",
         paddingLeft: "50px",
         paddingRight: "60px",
       }}

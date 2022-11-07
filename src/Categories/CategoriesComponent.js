@@ -20,7 +20,11 @@ export const CategoriesNavBar = (props) => {
     <Box className="items" sx={{ display: "flex" }}>
       {items?.map((category) => {
         return (
-          <Typography component="p" style={{ marginRight: "30px" }}>
+          <Typography
+            key={category}
+            component="p"
+            style={{ marginRight: "30px" }}
+          >
             <span
               onClick={() => setNavCategoryItem(category)}
               // prettier-ignore

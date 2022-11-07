@@ -6,9 +6,9 @@ import TopProductLists from "./ProductList";
 export const TopProductComponent = () => {
   return (
     <Box
-      className="nav_bar nav_bars_items"
+      className="nav_bar nav_bars_items Navbar_component "
       sx={{
-        display: "flex",
+        display: "block",
         flexWrap: "wrap",
         width: "100%",
         justifyContent: "space-between",
@@ -22,7 +22,6 @@ export const TopProductComponent = () => {
         sx={{
           marginTop: "60px",
           position: "relative",
-          // width: "25%",
         }}
       >
         <Typography component="h1" className="mySaless">
@@ -44,7 +43,6 @@ export const TopProductComponent = () => {
         sx={{
           marginTop: "60px",
           position: "relative",
-          // width: "25%",
         }}
       >
         <Typography component="h1" className="mySaless">
@@ -66,7 +64,6 @@ export const TopProductComponent = () => {
         sx={{
           marginTop: "60px",
           position: "relative",
-          // width: "25%",
         }}
       >
         <Typography component="h1" className="mySaless">
@@ -88,7 +85,6 @@ export const TopProductComponent = () => {
         sx={{
           marginTop: "60px",
           position: "relative",
-          // width: "25%",
           display: {
             lg: "block",
           },
