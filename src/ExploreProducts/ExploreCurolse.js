@@ -18,10 +18,10 @@ export const ExploerSilder = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {

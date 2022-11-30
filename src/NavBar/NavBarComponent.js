@@ -9,9 +9,8 @@ import { AvatarComponent } from "./AvatarComponent";
 const StyledAppBar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
-  marginTop: "20px",
-  marginBottom: "20px",
-  padding: "0%",
+  paddingTop: "20px",
+  paddingBottom: "20px",
 });
 export const NavBarComponents = () => {
   return (

@@ -23,7 +23,7 @@ export const CoffeteasMapFunction = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -44,14 +44,13 @@ export const CoffeteasMapFunction = () => {
     ],
   };
   const items = useSelector((state) => state.products.items.teaCoffy);
+
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your order is add to cart");
   };
   const WishlisthandlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your product is add to wishlist");
   };
   return (
     <div className="App">

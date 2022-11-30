@@ -17,7 +17,15 @@ export const AvatarComponent = () => {
     setAnchorEl(null);
   };
   return (
-    <Box>
+    <Box
+      sx={{
+        display: {
+          lg: "flex",
+          md: "fkex",
+          xs: "none",
+        },
+      }}
+    >
       <Toolbar
         sx={{
           paddingLeft: {

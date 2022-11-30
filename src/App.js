@@ -1,5 +1,4 @@
-// import "./assets/css/index.css";
-// import { Route, Routes } from "react-router-dom";
+import React from "react";
 import { Box, Divider } from "@mui/material";
 import { useSelector } from "react-redux";
 import { SecondNavBarComponent } from "./BrowerComponent/SecondNavBarComponent";
@@ -9,6 +8,11 @@ import { HeroImageComponent } from "./Components/HeroImageComponent";
 import { TopProductComponent } from "./TopProducts/TopProductComponent";
 import { ExploreCate } from "./ExploreProducts/ExploreProduct";
 import { NavBarComponents } from "./NavBar/NavBarComponent";
+import BottomHeroComponent from "./Components/BottomHeroComponent";
+import BenefitComponent from "./Components/BenefitComponent";
+import FooterComponent from "./Components/FooterComponent";
+import CopyWriteComponent from "./Components/CopyWriteComponent";
+
 function App() {
   const secondProduct = useSelector(
     (state) => state.products.items.SecondProduct
@@ -35,13 +39,12 @@ function App() {
         products={thirdProduct}
       />
       <TopProductComponent />
-      {/* <Routes>
-        <Route path="/" element={<MainHomePage />} />
-        <Route path="/Vegetables" element={<FruitsPage />} />
-        <Route path="/Fruits" element={<FruitsPage />} />
-        <Route path="/Coffe&teas" element={<FruitsPage />} />
-        <Route path="/Meat" element={<FruitsPage />} />
-      </Routes> */}
+      <BottomHeroComponent />
+      <BenefitComponent />
+      <Divider />
+      <FooterComponent />
+      <Divider />
+      <CopyWriteComponent />
     </Box>
   );
 }

@@ -2,14 +2,16 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../Context/cartSlice";
 import { Box } from "@mui/system";
 import { Button, Typography } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ReactComponent as Shopping } from "../assets/Images/Svg/SmallShopping.svg";
-
+import { addToWish } from "../Context/wishlist";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const Silder = ({ products }) => {
   const settings = {
     dots: false,
@@ -25,7 +27,7 @@ export const Silder = ({ products }) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -49,12 +51,13 @@ export const Silder = ({ products }) => {
   const dispatch = useDispatch();
   const handlerClick = (product) => {
     dispatch(addToCart(product));
-    alert("Your order is add to cart");
   };
   const WishlisthandlerClick = (product) => {
-    dispatch(addToCart(product));
-    alert("Your product is add to wishlist");
+    dispatch(addToWish(product));
   };
+  const notify = () => toast("Your product is add to cart!");
+  const notify2 = () => toast("Your product is add to wishlist!");
+
   return (
     <div className="App">
       <Slider {...settings}>
@@ -93,36 +96,38 @@ export const Silder = ({ products }) => {
               >
                 {name.name}
               </Typography>
-              <Typography
-                component="p"
-                onClick={() => WishlisthandlerClick(name)}
-              >
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#FDC040" }}>
-                  {<StarRateIcon />}
-                </Typography>
-                <Typography component="span" sx={{ color: "#D4D4D4" }}>
-                  {<StarRateIcon />}
-                </Typography>
+              <Button onClick={notify2}>
                 <Typography
-                  component="span"
-                  sx={{
-                    paddingTop: "10px",
-                    fontSize: "12px",
-                    color: "#ADADAD",
-                  }}
+                  component="p"
+                  onClick={() => WishlisthandlerClick(name)}
                 >
-                  {<StarBorderIcon />}
+                  <Typography component="span" sx={{ color: "#FDC040" }}>
+                    {<StarRateIcon />}
+                  </Typography>
+                  <Typography component="span" sx={{ color: "#FDC040" }}>
+                    {<StarRateIcon />}
+                  </Typography>
+                  <Typography component="span" sx={{ color: "#FDC040" }}>
+                    {<StarRateIcon />}
+                  </Typography>
+                  <Typography component="span" sx={{ color: "#FDC040" }}>
+                    {<StarRateIcon />}
+                  </Typography>
+                  <Typography component="span" sx={{ color: "#D4D4D4" }}>
+                    {<StarRateIcon />}
+                  </Typography>
+                  <Typography
+                    component="span"
+                    sx={{
+                      paddingTop: "10px",
+                      fontSize: "12px",
+                      color: "#ADADAD",
+                    }}
+                  >
+                    {<StarBorderIcon />}
+                  </Typography>
                 </Typography>
-              </Typography>
+              </Button>
               <Typography component="p" sx={{ paddingBottom: "20px" }}>
                 <Typography component="span">
                   {name.by}
@@ -171,6 +176,7 @@ export const Silder = ({ products }) => {
                         background: "#DEF9EC",
                       },
                     }}
+                    onClick={notify}
                   >
                     <span>{<Shopping />}</span>
                     <span
@@ -179,6 +185,7 @@ export const Silder = ({ products }) => {
                         paddingLeft: "5px",
                       }}
                       onClick={() => handlerClick(name)}
+                      id="add"
                     >
                       Add
                     </span>
@@ -189,6 +196,7 @@ export const Silder = ({ products }) => {
           );
         })}
       </Slider>
+      <ToastContainer />
     </div>
   );
 };

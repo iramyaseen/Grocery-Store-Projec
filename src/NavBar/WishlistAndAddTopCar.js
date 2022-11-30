@@ -3,15 +3,17 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { ReactComponent as Heart } from "../assets/Images/Svg/li_heart.svg";
 import { ReactComponent as Shopping } from "../assets/Images/Svg/li_shopping-cart.svg";
-import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { DropDownNavBar } from "../DropDownMenu/DropDownNavBar";
+import { AddToCardDropDown } from "./AddToCardDropDown";
+import { WishlistDropDownCart } from "./WishListDropDownCart";
 
 export const WishlistAndAddTopCart = () => {
   const { cartTotalQuantity, cartTotalAmount } = useSelector(
     (state) => state.cart
   );
-  console.log(cartTotalAmount);
+  const { wishTotalQuantity, wishTotalAmount } = useSelector(
+    (state) => state.wish
+  );
   return (
     <Box
       sx={{
@@ -25,35 +27,45 @@ export const WishlistAndAddTopCart = () => {
         },
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Heart />
-        <NavLink to="/wishlist-products" sx={{ textDecoration: "none" }}>
+        <Typography
+          component="span"
+          sx={{
+            position: "absolute",
+            width: "28px",
+            height: "28px",
+            lineHeight: "0.",
+            left: "7%",
+            bottom: "21px",
+            background: "#3BB77E",
+            border: "3px solid #FFFFFF",
+            borderRadius: "50%",
+            textAlign: "center",
+            alignItems: "center",
+            color: "white",
+            fontSize: "14px",
+          }}
+        >
+          {wishTotalQuantity}
+        </Typography>
+        <Box>
           <Typography
-            component="span"
             sx={{
-              position: "absolute",
-              width: "28px",
-              height: "28px",
-              lineHeight: "0.",
-              left: "7%",
-              bottom: "21px",
-              background: "#3BB77E",
-              border: "3px solid #FFFFFF",
-              borderRadius: "50%",
-              textAlign: "center",
-              alignItems: "center",
-              color: "white",
-              fontSize: "14px",
+              paddingLeft: "15px",
+              fontSize: "15px",
+              color: "#253D4E",
+              fontWeight: "500",
             }}
           >
-            4
+            <WishlistDropDownCart />
           </Typography>
-          <Typography
-            sx={{ paddingLeft: "15px", color: "#253D4E", fontWeight: "500" }}
-          >
-            Wishlist
-          </Typography>
-        </NavLink>
+        </Box>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Shopping />
@@ -64,7 +76,7 @@ export const WishlistAndAddTopCart = () => {
             width: "28px",
             height: "28px",
             lineHeight: "0.",
-            left: "60%",
+            left: "63%",
             bottom: "21px",
             background: "#3BB77E",
             border: "3px solid #FFFFFF",
@@ -86,7 +98,7 @@ export const WishlistAndAddTopCart = () => {
               fontWeight: "500",
             }}
           >
-            <DropDownNavBar name="Add to cart" />
+            <AddToCardDropDown />
           </Typography>
         </Box>
       </Box>

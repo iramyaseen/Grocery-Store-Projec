@@ -1,16 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  cartItems: localStorage.getItem("CartItems")
-    ? JSON.parse(localStorage.getItem("CartItems"))
+  cartItems: localStorage.getItem("Wishlist")
+    ? JSON.parse(localStorage.getItem("Wishlist"))
     : [],
-  cartTotalQuantity: 0,
-  cartTotalAmount: 0,
+  wishTotalQuantity: 0,
+  wishTotalAmount: 0,
 };
-const cartSlice = createSlice({
-  name: "cart",
+
+const wishlistSlice = createSlice({
+  name: "wish",
   initialState,
   reducers: {
-    addToCart(state, action) {
+    addToWish(state, action) {
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -20,16 +21,16 @@ const cartSlice = createSlice({
         const tempProduct = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProduct);
       }
-      localStorage.setItem("CartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem("Wishlist", JSON.stringify(state.cartItems));
     },
-    removeFromCart(state, action) {
+    removeFromWish(state, action) {
       const nextCartItems = state.cartItems.filter(
         (cartItems) => cartItems.id !== action.payload.id
       );
       state.cartItems = nextCartItems;
-      localStorage.setItem("CartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem("Wishlist", JSON.stringify(state.cartItems));
     },
-    decreaseCart(state, action) {
+    decreaseWish(state, action) {
       const itemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.id === action.payload.id
       );
@@ -41,14 +42,14 @@ const cartSlice = createSlice({
         );
         state.cartItems = nextCartItems;
       }
-      localStorage.setItem("CartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem("Wishlist", JSON.stringify(state.cartItems));
     },
-    clearCart(state, action) {
+    clearWish(state, action) {
       state.cartItems = [];
-      localStorage.setItem("CartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem("Wishlist", JSON.stringify(state.cartItems));
     },
 
-    getTotals(state, action) {
+    getTotalsWish(state, action) {
       let { total, quantity } = state.cartItems.reduce(
         (cartTotal, cartItem) => {
           const { price, cartQuantity } = cartItem;
@@ -65,13 +66,18 @@ const cartSlice = createSlice({
         }
       );
       total = parseFloat(total.toFixed(2));
-      state.cartTotalQuantity = quantity;
-      state.cartTotalAmount = total;
+      state.wishTotalQuantity = quantity;
+      state.wishTotalAmount = total;
     },
   },
 });
 
-export const { addToCart, removeFromCart, decreaseCart, clearCart, getTotals } =
-  cartSlice.actions;
+export const {
+  addToWish,
+  removeFromWish,
+  decreaseWish,
+  clearWish,
+  getTotalsWish,
+} = wishlistSlice.actions;
 
-export default cartSlice.reducer;
+export default wishlistSlice.reducer;
